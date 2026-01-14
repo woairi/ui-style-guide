@@ -1,0 +1,29 @@
+# 운영체제
+.DS_Store
+Thumbs.db
+
+# 에디터
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 로그
+*.log
+
+# 임시 파일
+*.tmp
+*.temp
+
+# 압축 파일 (필요시 제외)
+*.zip
+*.rar
+*.7z
+
+# Node modules (필요시)
+node_modules/
+
+# 빌드 결과물
+dist/
+build/

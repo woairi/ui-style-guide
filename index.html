@@ -1,0 +1,2011 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI Style Guide</title>
+  
+  <!-- CSS 파일 -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/themes.css">
+  
+  <!-- 폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- 헤더 -->
+  <header class="header">
+    <!-- 모바일 메뉴 토글 -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="메뉴 열기">
+      <div class="mobile-menu-toggle-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+    
+    <div class="header-logo">UI Style Guide</div>
+    
+    <nav class="header-nav">
+      <a href="#tokens" class="header-nav-link">토큰</a>
+      <a href="#buttons" class="header-nav-link">버튼</a>
+      <a href="#forms" class="header-nav-link">폼</a>
+      <a href="#cards" class="header-nav-link">카드</a>
+    </nav>
+    
+    <div class="header-actions">
+      <a href="index-en.html" class="lang-toggle" aria-label="Switch to English">
+        <span class="lang-toggle-text">EN</span>
+      </a>
+      <button class="theme-toggle" id="themeToggle" aria-label="테마 전환">
+        <span class="theme-toggle-icon"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 사이드바 오버레이 (모바일) -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- 메인 레이아웃 -->
+  <div class="main-layout">
+    <!-- 사이드바 -->
+    <aside class="sidebar" id="sidebar">
+      <nav class="sidebar-nav">
+        <div class="sidebar-section-title">기본 요소</div>
+        <a href="#tokens" class="sidebar-link active" data-section="tokens">디자인 토큰</a>
+        <a href="#buttons" class="sidebar-link" data-section="buttons">버튼</a>
+        <a href="#forms" class="sidebar-link" data-section="forms">폼</a>
+        
+        <div class="sidebar-section-title">레이아웃</div>
+        <a href="#cards" class="sidebar-link" data-section="cards">카드</a>
+        <a href="#navigation" class="sidebar-link" data-section="navigation">네비게이션</a>
+        
+        <div class="sidebar-section-title">인터랙션</div>
+        <a href="#feedback" class="sidebar-link" data-section="feedback">피드백</a>
+        <a href="#trends" class="sidebar-link" data-section="trends">트렌드</a>
+        
+        <div class="sidebar-section-title">참고</div>
+        <a href="#guide" class="sidebar-link" data-section="guide">📘 스타일 가이드</a>
+      </nav>
+    </aside>
+
+    <!-- 메인 콘텐츠 -->
+    <main class="main-content">
+      <!-- 디자인 토큰 섹션 -->
+      <section id="tokens" class="section">
+        <h1 class="section-title">디자인 토큰</h1>
+        <p class="section-description">
+          색상, 타이포그래피, 간격 등 디자인 시스템의 기본 단위입니다. 
+          일관된 UI를 구축하기 위한 핵심 변수들을 정의합니다.
+        </p>
+
+        <!-- 색상 팔레트 서브섹션 -->
+        <div class="subsection" id="colors">
+          <h2 class="subsection-title">색상 팔레트</h2>
+          <p class="subsection-description">
+            프라이머리, 세컨더리, 뉴트럴, 시맨틱 색상을 정의합니다. 
+            클릭하면 CSS 변수를 복사할 수 있습니다.
+          </p>
+
+          <!-- 프라이머리 색상 -->
+          <div class="color-palette-group">
+            <h3 class="color-palette-title">Primary</h3>
+            <div class="color-scale">
+              <div class="color-scale-item" style="background-color: var(--color-primary-50);" data-copy="--color-primary-50">
+                <span class="color-scale-label" style="color: var(--color-primary-900);">50</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-primary-100);" data-copy="--color-primary-100">
+                <span class="color-scale-label" style="color: var(--color-primary-900);">100</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-primary-200);" data-copy="--color-primary-200">
+                <span class="color-scale-label" style="color: var(--color-primary-900);">200</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-primary-300);" data-copy="--color-primary-300">
+                <span class="color-scale-label" style="color: var(--color-primary-900);">300</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-primary-400);" data-copy="--color-primary-400">
+                <span class="color-scale-label" style="color: white;">400</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-primary-500);" data-copy="--color-primary-500">
+                <span class="color-scale-label" style="color: white;">500</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-primary-600);" data-copy="--color-primary-600">
+                <span class="color-scale-label" style="color: white;">600</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-primary-700);" data-copy="--color-primary-700">
+                <span class="color-scale-label" style="color: white;">700</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-primary-800);" data-copy="--color-primary-800">
+                <span class="color-scale-label" style="color: white;">800</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-primary-900);" data-copy="--color-primary-900">
+                <span class="color-scale-label" style="color: white;">900</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 세컨더리 색상 -->
+          <div class="color-palette-group">
+            <h3 class="color-palette-title">Secondary</h3>
+            <div class="color-scale">
+              <div class="color-scale-item" style="background-color: var(--color-secondary-50);" data-copy="--color-secondary-50">
+                <span class="color-scale-label" style="color: var(--color-secondary-900);">50</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-secondary-100);" data-copy="--color-secondary-100">
+                <span class="color-scale-label" style="color: var(--color-secondary-900);">100</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-secondary-200);" data-copy="--color-secondary-200">
+                <span class="color-scale-label" style="color: var(--color-secondary-900);">200</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-secondary-300);" data-copy="--color-secondary-300">
+                <span class="color-scale-label" style="color: var(--color-secondary-900);">300</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-secondary-400);" data-copy="--color-secondary-400">
+                <span class="color-scale-label" style="color: white;">400</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-secondary-500);" data-copy="--color-secondary-500">
+                <span class="color-scale-label" style="color: white;">500</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-secondary-600);" data-copy="--color-secondary-600">
+                <span class="color-scale-label" style="color: white;">600</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-secondary-700);" data-copy="--color-secondary-700">
+                <span class="color-scale-label" style="color: white;">700</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-secondary-800);" data-copy="--color-secondary-800">
+                <span class="color-scale-label" style="color: white;">800</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-secondary-900);" data-copy="--color-secondary-900">
+                <span class="color-scale-label" style="color: white;">900</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 뉴트럴 색상 -->
+          <div class="color-palette-group">
+            <h3 class="color-palette-title">Neutral</h3>
+            <div class="color-scale">
+              <div class="color-scale-item" style="background-color: var(--color-neutral-50);" data-copy="--color-neutral-50">
+                <span class="color-scale-label" style="color: var(--color-neutral-900);">50</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-neutral-100);" data-copy="--color-neutral-100">
+                <span class="color-scale-label" style="color: var(--color-neutral-900);">100</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-neutral-200);" data-copy="--color-neutral-200">
+                <span class="color-scale-label" style="color: var(--color-neutral-900);">200</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-neutral-300);" data-copy="--color-neutral-300">
+                <span class="color-scale-label" style="color: var(--color-neutral-900);">300</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-neutral-400);" data-copy="--color-neutral-400">
+                <span class="color-scale-label" style="color: white;">400</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-neutral-500);" data-copy="--color-neutral-500">
+                <span class="color-scale-label" style="color: white;">500</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-neutral-600);" data-copy="--color-neutral-600">
+                <span class="color-scale-label" style="color: white;">600</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-neutral-700);" data-copy="--color-neutral-700">
+                <span class="color-scale-label" style="color: white;">700</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-neutral-800);" data-copy="--color-neutral-800">
+                <span class="color-scale-label" style="color: white;">800</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-neutral-900);" data-copy="--color-neutral-900">
+                <span class="color-scale-label" style="color: white;">900</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 시맨틱 색상 -->
+          <div class="color-palette-group">
+            <h3 class="color-palette-title">Semantic</h3>
+            <div class="semantic-colors-grid">
+              <div class="semantic-color-card" data-copy="--color-success-500">
+                <div class="semantic-color-preview" style="background-color: var(--color-success-500);"></div>
+                <div class="semantic-color-info">
+                  <div class="semantic-color-name">Success</div>
+                  <div class="semantic-color-desc">성공, 완료, 긍정적 상태</div>
+                </div>
+              </div>
+              <div class="semantic-color-card" data-copy="--color-warning-500">
+                <div class="semantic-color-preview" style="background-color: var(--color-warning-500);"></div>
+                <div class="semantic-color-info">
+                  <div class="semantic-color-name">Warning</div>
+                  <div class="semantic-color-desc">경고, 주의가 필요한 상태</div>
+                </div>
+              </div>
+              <div class="semantic-color-card" data-copy="--color-error-500">
+                <div class="semantic-color-preview" style="background-color: var(--color-error-500);"></div>
+                <div class="semantic-color-info">
+                  <div class="semantic-color-name">Error</div>
+                  <div class="semantic-color-desc">오류, 실패, 부정적 상태</div>
+                </div>
+              </div>
+              <div class="semantic-color-card" data-copy="--color-info-500">
+                <div class="semantic-color-preview" style="background-color: var(--color-info-500);"></div>
+                <div class="semantic-color-info">
+                  <div class="semantic-color-name">Info</div>
+                  <div class="semantic-color-desc">정보, 안내 메시지</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 타이포그래피 서브섹션 -->
+        <div class="subsection" id="typography">
+          <h2 class="subsection-title">타이포그래피</h2>
+          <p class="subsection-description">
+            제목, 본문, 캡션 등 텍스트 스타일을 계층별로 정의합니다.
+          </p>
+
+          <!-- 제목 스타일 -->
+          <div class="color-palette-group">
+            <h3 class="color-palette-title">제목 (Headings)</h3>
+            
+            <div class="typography-sample">
+              <h1 class="typography-sample-text">Heading 1 - 메인 제목</h1>
+              <div class="typography-sample-info">
+                <div class="typography-info-item">
+                  <span class="typography-info-label">크기</span>
+                  <span class="typography-info-value" data-copy="--text-4xl">--text-4xl (36px)</span>
+                </div>
+                <div class="typography-info-item">
+                  <span class="typography-info-label">굵기</span>
+                  <span class="typography-info-value" data-copy="--font-semibold">--font-semibold (600)</span>
+                </div>
+                <div class="typography-info-item">
+                  <span class="typography-info-label">줄높이</span>
+                  <span class="typography-info-value" data-copy="--leading-tight">--leading-tight (1.25)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="typography-sample">
+              <h2 class="typography-sample-text">Heading 2 - 섹션 제목</h2>
+              <div class="typography-sample-info">
+                <div class="typography-info-item">
+                  <span class="typography-info-label">크기</span>
+                  <span class="typography-info-value" data-copy="--text-3xl">--text-3xl (30px)</span>
+                </div>
+                <div class="typography-info-item">
+                  <span class="typography-info-label">굵기</span>
+                  <span class="typography-info-value" data-copy="--font-semibold">--font-semibold (600)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="typography-sample">
+              <h3 class="typography-sample-text">Heading 3 - 서브섹션 제목</h3>
+              <div class="typography-sample-info">
+                <div class="typography-info-item">
+                  <span class="typography-info-label">크기</span>
+                  <span class="typography-info-value" data-copy="--text-2xl">--text-2xl (24px)</span>
+                </div>
+                <div class="typography-info-item">
+                  <span class="typography-info-label">굵기</span>
+                  <span class="typography-info-value" data-copy="--font-semibold">--font-semibold (600)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="typography-sample">
+              <h4 class="typography-sample-text">Heading 4 - 소제목</h4>
+              <div class="typography-sample-info">
+                <div class="typography-info-item">
+                  <span class="typography-info-label">크기</span>
+                  <span class="typography-info-value" data-copy="--text-xl">--text-xl (20px)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="typography-sample">
+              <h5 class="typography-sample-text">Heading 5 - 작은 제목</h5>
+              <div class="typography-sample-info">
+                <div class="typography-info-item">
+                  <span class="typography-info-label">크기</span>
+                  <span class="typography-info-value" data-copy="--text-lg">--text-lg (18px)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="typography-sample">
+              <h6 class="typography-sample-text">Heading 6 - 가장 작은 제목</h6>
+              <div class="typography-sample-info">
+                <div class="typography-info-item">
+                  <span class="typography-info-label">크기</span>
+                  <span class="typography-info-value" data-copy="--text-base">--text-base (16px)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 본문 스타일 -->
+          <div class="color-palette-group">
+            <h3 class="color-palette-title">본문 (Body)</h3>
+            
+            <div class="typography-sample">
+              <p class="typography-sample-text" style="font-size: var(--text-lg); margin-bottom: 0;">
+                Large Body - 큰 본문 텍스트입니다. 중요한 설명이나 리드 문단에 사용합니다.
+              </p>
+              <div class="typography-sample-info">
+                <div class="typography-info-item">
+                  <span class="typography-info-label">크기</span>
+                  <span class="typography-info-value" data-copy="--text-lg">--text-lg (18px)</span>
+                </div>
+                <div class="typography-info-item">
+                  <span class="typography-info-label">줄높이</span>
+                  <span class="typography-info-value" data-copy="--leading-relaxed">--leading-relaxed (1.625)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="typography-sample">
+              <p class="typography-sample-text" style="margin-bottom: 0;">
+                Base Body - 기본 본문 텍스트입니다. 일반적인 콘텐츠에 사용하는 표준 크기입니다.
+              </p>
+              <div class="typography-sample-info">
+                <div class="typography-info-item">
+                  <span class="typography-info-label">크기</span>
+                  <span class="typography-info-value" data-copy="--text-base">--text-base (16px)</span>
+                </div>
+                <div class="typography-info-item">
+                  <span class="typography-info-label">줄높이</span>
+                  <span class="typography-info-value" data-copy="--leading-normal">--leading-normal (1.5)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="typography-sample">
+              <p class="typography-sample-text" style="font-size: var(--text-sm); margin-bottom: 0;">
+                Small Body - 작은 본문 텍스트입니다. 보조 정보나 부가 설명에 사용합니다.
+              </p>
+              <div class="typography-sample-info">
+                <div class="typography-info-item">
+                  <span class="typography-info-label">크기</span>
+                  <span class="typography-info-value" data-copy="--text-sm">--text-sm (14px)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 캡션 및 기타 -->
+          <div class="color-palette-group">
+            <h3 class="color-palette-title">캡션 및 기타</h3>
+            
+            <div class="typography-sample">
+              <span class="caption typography-sample-text" style="display: block;">
+                Caption - 캡션 텍스트입니다. 이미지 설명이나 메타 정보에 사용합니다.
+              </span>
+              <div class="typography-sample-info">
+                <div class="typography-info-item">
+                  <span class="typography-info-label">크기</span>
+                  <span class="typography-info-value" data-copy="--text-xs">--text-xs (12px)</span>
+                </div>
+                <div class="typography-info-item">
+                  <span class="typography-info-label">색상</span>
+                  <span class="typography-info-value" data-copy="--color-text-tertiary">--color-text-tertiary</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="typography-sample">
+              <code class="typography-sample-text">const code = "인라인 코드 스타일";</code>
+              <div class="typography-sample-info">
+                <div class="typography-info-item">
+                  <span class="typography-info-label">폰트</span>
+                  <span class="typography-info-value" data-copy="--font-mono">--font-mono</span>
+                </div>
+                <div class="typography-info-item">
+                  <span class="typography-info-label">배경</span>
+                  <span class="typography-info-value" data-copy="--color-bg-tertiary">--color-bg-tertiary</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 간격 시스템 서브섹션 -->
+        <div class="subsection" id="spacing">
+          <h2 class="subsection-title">간격 시스템</h2>
+          <p class="subsection-description">
+            4px 기반의 간격 시스템입니다. 일관된 여백과 패딩을 적용하는 데 사용합니다.
+          </p>
+
+          <!-- 간격 그리드 -->
+          <div class="spacing-grid">
+            <div class="spacing-item" data-copy="--space-1">
+              <div class="spacing-visual">
+                <div class="spacing-bar" style="height: 4px;"></div>
+              </div>
+              <div class="spacing-info">
+                <div class="spacing-name">--space-1</div>
+                <div class="spacing-value">4px (0.25rem)</div>
+              </div>
+            </div>
+
+            <div class="spacing-item" data-copy="--space-2">
+              <div class="spacing-visual">
+                <div class="spacing-bar" style="height: 8px;"></div>
+              </div>
+              <div class="spacing-info">
+                <div class="spacing-name">--space-2</div>
+                <div class="spacing-value">8px (0.5rem)</div>
+              </div>
+            </div>
+
+            <div class="spacing-item" data-copy="--space-3">
+              <div class="spacing-visual">
+                <div class="spacing-bar" style="height: 12px;"></div>
+              </div>
+              <div class="spacing-info">
+                <div class="spacing-name">--space-3</div>
+                <div class="spacing-value">12px (0.75rem)</div>
+              </div>
+            </div>
+
+            <div class="spacing-item" data-copy="--space-4">
+              <div class="spacing-visual">
+                <div class="spacing-bar" style="height: 16px;"></div>
+              </div>
+              <div class="spacing-info">
+                <div class="spacing-name">--space-4</div>
+                <div class="spacing-value">16px (1rem)</div>
+              </div>
+            </div>
+
+            <div class="spacing-item" data-copy="--space-5">
+              <div class="spacing-visual">
+                <div class="spacing-bar" style="height: 20px;"></div>
+              </div>
+              <div class="spacing-info">
+                <div class="spacing-name">--space-5</div>
+                <div class="spacing-value">20px (1.25rem)</div>
+              </div>
+            </div>
+
+            <div class="spacing-item" data-copy="--space-6">
+              <div class="spacing-visual">
+                <div class="spacing-bar" style="height: 24px;"></div>
+              </div>
+              <div class="spacing-info">
+                <div class="spacing-name">--space-6</div>
+                <div class="spacing-value">24px (1.5rem)</div>
+              </div>
+            </div>
+
+            <div class="spacing-item" data-copy="--space-8">
+              <div class="spacing-visual">
+                <div class="spacing-bar" style="height: 32px;"></div>
+              </div>
+              <div class="spacing-info">
+                <div class="spacing-name">--space-8</div>
+                <div class="spacing-value">32px (2rem)</div>
+              </div>
+            </div>
+
+            <div class="spacing-item" data-copy="--space-10">
+              <div class="spacing-visual">
+                <div class="spacing-bar" style="height: 40px;"></div>
+              </div>
+              <div class="spacing-info">
+                <div class="spacing-name">--space-10</div>
+                <div class="spacing-value">40px (2.5rem)</div>
+              </div>
+            </div>
+
+            <div class="spacing-item" data-copy="--space-12">
+              <div class="spacing-visual">
+                <div class="spacing-bar" style="height: 48px;"></div>
+              </div>
+              <div class="spacing-info">
+                <div class="spacing-name">--space-12</div>
+                <div class="spacing-value">48px (3rem)</div>
+              </div>
+            </div>
+
+            <div class="spacing-item" data-copy="--space-16">
+              <div class="spacing-visual">
+                <div class="spacing-bar" style="height: 64px;"></div>
+              </div>
+              <div class="spacing-info">
+                <div class="spacing-name">--space-16</div>
+                <div class="spacing-value">64px (4rem)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 수평 간격 시각화 -->
+          <div class="color-palette-group" style="margin-top: var(--space-8);">
+            <h3 class="color-palette-title">수평 간격 시각화</h3>
+            <div class="spacing-horizontal-demo">
+              <div class="spacing-horizontal-item">
+                <span class="spacing-horizontal-label">--space-1 (4px)</span>
+                <div class="spacing-horizontal-bar" style="width: 4px;"></div>
+              </div>
+              <div class="spacing-horizontal-item">
+                <span class="spacing-horizontal-label">--space-2 (8px)</span>
+                <div class="spacing-horizontal-bar" style="width: 8px;"></div>
+              </div>
+              <div class="spacing-horizontal-item">
+                <span class="spacing-horizontal-label">--space-4 (16px)</span>
+                <div class="spacing-horizontal-bar" style="width: 16px;"></div>
+              </div>
+              <div class="spacing-horizontal-item">
+                <span class="spacing-horizontal-label">--space-6 (24px)</span>
+                <div class="spacing-horizontal-bar" style="width: 24px;"></div>
+              </div>
+              <div class="spacing-horizontal-item">
+                <span class="spacing-horizontal-label">--space-8 (32px)</span>
+                <div class="spacing-horizontal-bar" style="width: 32px;"></div>
+              </div>
+              <div class="spacing-horizontal-item">
+                <span class="spacing-horizontal-label">--space-12 (48px)</span>
+                <div class="spacing-horizontal-bar" style="width: 48px;"></div>
+              </div>
+              <div class="spacing-horizontal-item">
+                <span class="spacing-horizontal-label">--space-16 (64px)</span>
+                <div class="spacing-horizontal-bar" style="width: 64px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 버튼 섹션 -->
+      <section id="buttons" class="section">
+        <h1 class="section-title">버튼</h1>
+        <p class="section-description">
+          다양한 상황에 맞는 버튼 스타일을 제공합니다. 
+          Primary, Secondary, Outline 등 여러 변형과 크기를 지원합니다.
+        </p>
+
+        <!-- 버튼 변형 -->
+        <div class="subsection">
+          <h2 class="subsection-title">버튼 변형</h2>
+          <p class="subsection-description">
+            용도에 따라 적절한 버튼 스타일을 선택하세요.
+          </p>
+
+          <div class="component-sample-box">
+            <div class="component-sample-title">Primary</div>
+            <p class="text-sm text-secondary mb-4">주요 액션에 사용합니다. 페이지당 하나의 Primary 버튼을 권장합니다.</p>
+            <div class="component-sample-row">
+              <button class="btn btn-primary btn-sm">Small</button>
+              <button class="btn btn-primary btn-md">Medium</button>
+              <button class="btn btn-primary btn-lg">Large</button>
+            </div>
+          </div>
+
+          <div class="component-sample-box">
+            <div class="component-sample-title">Secondary</div>
+            <p class="text-sm text-secondary mb-4">보조 액션에 사용합니다. Primary 버튼과 함께 사용할 때 적합합니다.</p>
+            <div class="component-sample-row">
+              <button class="btn btn-secondary btn-sm">Small</button>
+              <button class="btn btn-secondary btn-md">Medium</button>
+              <button class="btn btn-secondary btn-lg">Large</button>
+            </div>
+          </div>
+
+          <div class="component-sample-box">
+            <div class="component-sample-title">Outline</div>
+            <p class="text-sm text-secondary mb-4">대안적인 액션에 사용합니다. 시각적으로 덜 강조됩니다.</p>
+            <div class="component-sample-row">
+              <button class="btn btn-outline btn-sm">Small</button>
+              <button class="btn btn-outline btn-md">Medium</button>
+              <button class="btn btn-outline btn-lg">Large</button>
+            </div>
+          </div>
+
+          <div class="component-sample-box">
+            <div class="component-sample-title">Ghost</div>
+            <p class="text-sm text-secondary mb-4">최소한의 강조가 필요한 액션에 사용합니다.</p>
+            <div class="component-sample-row">
+              <button class="btn btn-ghost btn-sm">Small</button>
+              <button class="btn btn-ghost btn-md">Medium</button>
+              <button class="btn btn-ghost btn-lg">Large</button>
+            </div>
+          </div>
+
+          <div class="component-sample-box">
+            <div class="component-sample-title">Destructive</div>
+            <p class="text-sm text-secondary mb-4">삭제, 취소 등 위험한 액션에 사용합니다.</p>
+            <div class="component-sample-row">
+              <button class="btn btn-destructive btn-sm">Small</button>
+              <button class="btn btn-destructive btn-md">Medium</button>
+              <button class="btn btn-destructive btn-lg">Large</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 버튼 상태 -->
+        <div class="subsection">
+          <h2 class="subsection-title">버튼 상태</h2>
+          <p class="subsection-description">
+            버튼의 다양한 상태를 확인하세요. 마우스를 올려 호버 상태를 확인할 수 있습니다.
+          </p>
+
+          <div class="component-sample-box">
+            <div class="button-states-grid">
+              <div class="button-state-item">
+                <span class="button-state-label">Default</span>
+                <button class="btn btn-primary btn-md">버튼</button>
+              </div>
+              <div class="button-state-item">
+                <span class="button-state-label">Hover (마우스 올리기)</span>
+                <button class="btn btn-primary btn-md">버튼</button>
+              </div>
+              <div class="button-state-item">
+                <span class="button-state-label">Focus</span>
+                <button class="btn btn-primary btn-md" style="outline: 2px solid var(--color-focus-ring); outline-offset: 2px;">버튼</button>
+              </div>
+              <div class="button-state-item">
+                <span class="button-state-label">Disabled</span>
+                <button class="btn btn-primary btn-md" disabled>버튼</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 버튼 크기 비교 -->
+        <div class="subsection">
+          <h2 class="subsection-title">크기 비교</h2>
+          <p class="subsection-description">
+            Small, Medium, Large 세 가지 크기를 제공합니다.
+          </p>
+
+          <div class="component-sample-box">
+            <div class="component-sample-row" style="align-items: flex-end;">
+              <div class="button-state-item">
+                <span class="button-state-label">Small</span>
+                <button class="btn btn-primary btn-sm">버튼</button>
+              </div>
+              <div class="button-state-item">
+                <span class="button-state-label">Medium</span>
+                <button class="btn btn-primary btn-md">버튼</button>
+              </div>
+              <div class="button-state-item">
+                <span class="button-state-label">Large</span>
+                <button class="btn btn-primary btn-lg">버튼</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 버튼 조합 예시 -->
+        <div class="subsection">
+          <h2 class="subsection-title">버튼 조합</h2>
+          <p class="subsection-description">
+            여러 버튼을 함께 사용하는 일반적인 패턴입니다.
+          </p>
+
+          <div class="component-sample-box">
+            <div class="component-sample-title">폼 액션</div>
+            <div class="btn-group">
+              <button class="btn btn-primary btn-md">저장</button>
+              <button class="btn btn-outline btn-md">취소</button>
+            </div>
+          </div>
+
+          <div class="component-sample-box">
+            <div class="component-sample-title">확인 다이얼로그</div>
+            <div class="btn-group">
+              <button class="btn btn-destructive btn-md">삭제</button>
+              <button class="btn btn-ghost btn-md">취소</button>
+            </div>
+          </div>
+
+          <div class="component-sample-box">
+            <div class="component-sample-title">다중 액션</div>
+            <div class="btn-group">
+              <button class="btn btn-primary btn-md">제출</button>
+              <button class="btn btn-secondary btn-md">임시 저장</button>
+              <button class="btn btn-ghost btn-md">초기화</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 코드 스니펫 -->
+        <div class="subsection">
+          <h2 class="subsection-title">코드 스니펫</h2>
+          <p class="subsection-description">
+            버튼 컴포넌트의 HTML/CSS 코드입니다. 탭을 전환하여 확인하세요.
+          </p>
+
+          <div class="code-block">
+            <div class="code-block-header">
+              <div class="code-tabs">
+                <button class="code-tab active" data-tab="html">HTML</button>
+                <button class="code-tab" data-tab="css">CSS</button>
+              </div>
+              <button class="code-copy-btn">📋 복사</button>
+            </div>
+            <div class="code-content code-panel active" data-panel="html">
+              <pre><code><span class="comment">&lt;!-- Primary 버튼 --&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr-name">class</span>=<span class="attr-value">"btn btn-primary btn-md"</span><span class="tag">&gt;</span>버튼<span class="tag">&lt;/button&gt;</span>
+
+<span class="comment">&lt;!-- Secondary 버튼 --&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr-name">class</span>=<span class="attr-value">"btn btn-secondary btn-md"</span><span class="tag">&gt;</span>버튼<span class="tag">&lt;/button&gt;</span>
+
+<span class="comment">&lt;!-- Outline 버튼 --&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr-name">class</span>=<span class="attr-value">"btn btn-outline btn-md"</span><span class="tag">&gt;</span>버튼<span class="tag">&lt;/button&gt;</span>
+
+<span class="comment">&lt;!-- Ghost 버튼 --&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr-name">class</span>=<span class="attr-value">"btn btn-ghost btn-md"</span><span class="tag">&gt;</span>버튼<span class="tag">&lt;/button&gt;</span>
+
+<span class="comment">&lt;!-- Destructive 버튼 --&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr-name">class</span>=<span class="attr-value">"btn btn-destructive btn-md"</span><span class="tag">&gt;</span>버튼<span class="tag">&lt;/button&gt;</span></code></pre>
+            </div>
+            <div class="code-content code-panel" data-panel="css">
+              <pre><code><span class="selector">.btn</span> {
+  <span class="property">display</span>: <span class="value">inline-flex</span>;
+  <span class="property">align-items</span>: <span class="value">center</span>;
+  <span class="property">justify-content</span>: <span class="value">center</span>;
+  <span class="property">font-weight</span>: <span class="value">500</span>;
+  <span class="property">border-radius</span>: <span class="value">var(--radius-lg)</span>;
+  <span class="property">transition</span>: <span class="value">all 0.15s ease</span>;
+}
+
+<span class="selector">.btn-primary</span> {
+  <span class="property">background-color</span>: <span class="value">var(--color-primary-600)</span>;
+  <span class="property">color</span>: <span class="value">white</span>;
+}
+
+<span class="selector">.btn-md</span> {
+  <span class="property">padding</span>: <span class="value">0.75rem 1rem</span>;
+  <span class="property">font-size</span>: <span class="value">0.875rem</span>;
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 폼 섹션 -->
+      <section id="forms" class="section">
+        <h1 class="section-title">폼</h1>
+        <p class="section-description">
+          사용자 입력을 받기 위한 폼 컴포넌트입니다. 
+          텍스트 입력, 셀렉트, 체크박스 등 다양한 입력 요소를 포함합니다.
+        </p>
+
+        <!-- 텍스트 입력 -->
+        <div class="subsection">
+          <h2 class="subsection-title">텍스트 입력</h2>
+          <p class="subsection-description">
+            기본 텍스트 입력 필드와 다양한 상태를 확인하세요.
+          </p>
+
+          <div class="form-samples-grid">
+            <div class="form-sample-card">
+              <div class="form-sample-title">기본 상태</div>
+              <div class="form-group">
+                <label class="form-label">이름</label>
+                <input type="text" class="input" placeholder="이름을 입력하세요">
+              </div>
+            </div>
+
+            <div class="form-sample-card">
+              <div class="form-sample-title">포커스 상태</div>
+              <div class="form-group">
+                <label class="form-label">이메일</label>
+                <input type="email" class="input" placeholder="이메일을 입력하세요" value="example@email.com">
+                <span class="form-hint">유효한 이메일 주소를 입력하세요.</span>
+              </div>
+            </div>
+
+            <div class="form-sample-card">
+              <div class="form-sample-title">에러 상태</div>
+              <div class="form-group">
+                <label class="form-label form-label-required">비밀번호</label>
+                <input type="password" class="input input-error" placeholder="비밀번호를 입력하세요" value="123">
+                <span class="form-error">비밀번호는 8자 이상이어야 합니다.</span>
+              </div>
+            </div>
+
+            <div class="form-sample-card">
+              <div class="form-sample-title">비활성화 상태</div>
+              <div class="form-group">
+                <label class="form-label">사용자 ID</label>
+                <input type="text" class="input" placeholder="자동 생성됨" disabled value="user_12345">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 텍스트영역 -->
+        <div class="subsection">
+          <h2 class="subsection-title">텍스트영역</h2>
+          <p class="subsection-description">
+            여러 줄의 텍스트를 입력받는 컴포넌트입니다.
+          </p>
+
+          <div class="component-sample-box">
+            <div class="form-group">
+              <label class="form-label">메시지</label>
+              <textarea class="textarea" placeholder="메시지를 입력하세요..."></textarea>
+              <span class="form-hint">최대 500자까지 입력 가능합니다.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 셀렉트 -->
+        <div class="subsection">
+          <h2 class="subsection-title">셀렉트</h2>
+          <p class="subsection-description">
+            드롭다운 선택 컴포넌트입니다.
+          </p>
+
+          <div class="form-samples-grid">
+            <div class="form-sample-card">
+              <div class="form-sample-title">기본 상태</div>
+              <div class="form-group">
+                <label class="form-label">국가</label>
+                <select class="select">
+                  <option value="">선택하세요</option>
+                  <option value="kr">대한민국</option>
+                  <option value="us">미국</option>
+                  <option value="jp">일본</option>
+                  <option value="cn">중국</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-sample-card">
+              <div class="form-sample-title">비활성화 상태</div>
+              <div class="form-group">
+                <label class="form-label">언어</label>
+                <select class="select" disabled>
+                  <option value="ko" selected>한국어</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 체크박스 -->
+        <div class="subsection">
+          <h2 class="subsection-title">체크박스</h2>
+          <p class="subsection-description">
+            다중 선택이 가능한 체크박스 컴포넌트입니다.
+          </p>
+
+          <div class="component-sample-box">
+            <div class="form-states-row">
+              <div class="form-state-item">
+                <div class="form-sample-title">기본</div>
+                <label class="checkbox-wrapper">
+                  <input type="checkbox" class="checkbox">
+                  <span class="checkbox-label">이용약관에 동의합니다</span>
+                </label>
+              </div>
+
+              <div class="form-state-item">
+                <div class="form-sample-title">선택됨</div>
+                <label class="checkbox-wrapper">
+                  <input type="checkbox" class="checkbox" checked>
+                  <span class="checkbox-label">마케팅 수신 동의</span>
+                </label>
+              </div>
+
+              <div class="form-state-item">
+                <div class="form-sample-title">비활성화</div>
+                <label class="checkbox-wrapper">
+                  <input type="checkbox" class="checkbox" disabled>
+                  <span class="checkbox-label">필수 동의 항목</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 라디오 버튼 -->
+        <div class="subsection">
+          <h2 class="subsection-title">라디오 버튼</h2>
+          <p class="subsection-description">
+            단일 선택이 필요한 경우 사용하는 컴포넌트입니다.
+          </p>
+
+          <div class="component-sample-box">
+            <div class="form-group">
+              <label class="form-label">결제 방법</label>
+              <div class="radio-group">
+                <label class="radio-wrapper">
+                  <input type="radio" name="payment" class="radio" checked>
+                  <span class="radio-label">신용카드</span>
+                </label>
+                <label class="radio-wrapper">
+                  <input type="radio" name="payment" class="radio">
+                  <span class="radio-label">계좌이체</span>
+                </label>
+                <label class="radio-wrapper">
+                  <input type="radio" name="payment" class="radio">
+                  <span class="radio-label">휴대폰 결제</span>
+                </label>
+                <label class="radio-wrapper">
+                  <input type="radio" name="payment" class="radio" disabled>
+                  <span class="radio-label">포인트 결제 (잔액 부족)</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 토글 스위치 -->
+        <div class="subsection">
+          <h2 class="subsection-title">토글 스위치</h2>
+          <p class="subsection-description">
+            On/Off 상태를 전환하는 스위치 컴포넌트입니다.
+          </p>
+
+          <div class="component-sample-box">
+            <div class="form-states-row">
+              <div class="form-state-item">
+                <div class="form-sample-title">Off 상태</div>
+                <label class="toggle-wrapper">
+                  <input type="checkbox" class="toggle">
+                  <span class="toggle-label">알림 받기</span>
+                </label>
+              </div>
+
+              <div class="form-state-item">
+                <div class="form-sample-title">On 상태</div>
+                <label class="toggle-wrapper">
+                  <input type="checkbox" class="toggle" checked>
+                  <span class="toggle-label">다크 모드</span>
+                </label>
+              </div>
+
+              <div class="form-state-item">
+                <div class="form-sample-title">비활성화</div>
+                <label class="toggle-wrapper">
+                  <input type="checkbox" class="toggle" disabled>
+                  <span class="toggle-label">자동 업데이트</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 폼 예시 -->
+        <div class="subsection">
+          <h2 class="subsection-title">폼 조합 예시</h2>
+          <p class="subsection-description">
+            실제 사용 시나리오에 맞는 폼 조합입니다.
+          </p>
+
+          <div class="component-sample-box" style="max-width: 500px;">
+            <div class="form-sample-title">회원가입 폼</div>
+            <form onsubmit="return false;">
+              <div class="form-group">
+                <label class="form-label form-label-required">이메일</label>
+                <input type="email" class="input" placeholder="example@email.com">
+              </div>
+              <div class="form-group">
+                <label class="form-label form-label-required">비밀번호</label>
+                <input type="password" class="input" placeholder="8자 이상 입력">
+              </div>
+              <div class="form-group">
+                <label class="form-label">닉네임</label>
+                <input type="text" class="input" placeholder="닉네임을 입력하세요">
+              </div>
+              <div class="form-group">
+                <label class="checkbox-wrapper">
+                  <input type="checkbox" class="checkbox">
+                  <span class="checkbox-label">이용약관 및 개인정보처리방침에 동의합니다</span>
+                </label>
+              </div>
+              <div class="btn-group" style="margin-top: var(--space-6);">
+                <button type="submit" class="btn btn-primary btn-md">가입하기</button>
+                <button type="button" class="btn btn-ghost btn-md">취소</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- 카드 섹션 -->
+      <section id="cards" class="section">
+        <h1 class="section-title">카드</h1>
+        <p class="section-description">
+          콘텐츠를 그룹화하여 표시하는 카드 컴포넌트입니다. 
+          다양한 레이아웃 패턴과 함께 사용할 수 있습니다.
+        </p>
+
+        <!-- 카드 변형 -->
+        <div class="subsection">
+          <h2 class="subsection-title">카드 변형</h2>
+          <p class="subsection-description">
+            다양한 스타일의 카드 컴포넌트입니다. 마우스를 올려 호버 효과를 확인하세요.
+          </p>
+
+          <div class="card-grid">
+            <!-- 기본 카드 -->
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">기본 카드</h3>
+                <p class="card-description">
+                  가장 기본적인 카드 스타일입니다. 테두리와 배경색으로 콘텐츠를 구분합니다.
+                </p>
+              </div>
+            </div>
+
+            <!-- 이미지 카드 -->
+            <div class="card">
+              <div class="card-image-placeholder">이미지 영역</div>
+              <div class="card-body">
+                <h3 class="card-title">이미지 카드</h3>
+                <p class="card-description">
+                  상단에 이미지를 포함하는 카드입니다. 썸네일이나 미리보기에 적합합니다.
+                </p>
+              </div>
+            </div>
+
+            <!-- 호버 효과 카드 -->
+            <div class="card card-hover">
+              <div class="card-body">
+                <h3 class="card-title">호버 효과 카드</h3>
+                <p class="card-description">
+                  마우스를 올리면 위로 떠오르는 효과가 적용됩니다. 클릭 가능한 항목에 사용합니다.
+                </p>
+              </div>
+            </div>
+
+            <!-- 인터랙티브 카드 -->
+            <div class="card card-interactive">
+              <div class="card-body">
+                <h3 class="card-title">인터랙티브 카드</h3>
+                <p class="card-description">
+                  호버 시 테두리 색상이 변하고, 클릭 시 살짝 눌리는 효과가 있습니다.
+                </p>
+              </div>
+            </div>
+
+            <!-- 헤더/푸터 카드 -->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title" style="margin-bottom: 0;">헤더가 있는 카드</h3>
+              </div>
+              <div class="card-body">
+                <p class="card-description">
+                  헤더와 푸터 영역이 구분된 카드입니다. 복잡한 정보를 구조화할 때 유용합니다.
+                </p>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-primary btn-sm">액션</button>
+              </div>
+            </div>
+
+            <!-- 글래스모피즘 카드 -->
+            <div class="glass-demo-bg">
+              <div class="card card-glass" style="width: 100%; max-width: 280px;">
+                <div class="card-body">
+                  <h3 class="card-title" style="color: white;">글래스모피즘</h3>
+                  <p class="card-description" style="color: rgba(255,255,255,0.8);">
+                    반투명 배경과 블러 효과로 유리 같은 느낌을 줍니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flexbox 레이아웃 -->
+        <div class="subsection">
+          <h2 class="subsection-title">Flexbox 레이아웃</h2>
+          <p class="subsection-description">
+            Flexbox를 활용한 다양한 정렬 패턴입니다.
+          </p>
+
+          <div class="layout-demo">
+            <div class="layout-demo-title">justify-content: flex-start</div>
+            <div class="flex-demo-row justify-start">
+              <div class="layout-demo-box">1</div>
+              <div class="layout-demo-box">2</div>
+              <div class="layout-demo-box">3</div>
+            </div>
+          </div>
+
+          <div class="layout-demo">
+            <div class="layout-demo-title">justify-content: center</div>
+            <div class="flex-demo-row justify-center">
+              <div class="layout-demo-box">1</div>
+              <div class="layout-demo-box">2</div>
+              <div class="layout-demo-box">3</div>
+            </div>
+          </div>
+
+          <div class="layout-demo">
+            <div class="layout-demo-title">justify-content: space-between</div>
+            <div class="flex-demo-row justify-between">
+              <div class="layout-demo-box">1</div>
+              <div class="layout-demo-box">2</div>
+              <div class="layout-demo-box">3</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grid 레이아웃 -->
+        <div class="subsection">
+          <h2 class="subsection-title">Grid 레이아웃</h2>
+          <p class="subsection-description">
+            CSS Grid를 활용한 다양한 그리드 패턴입니다.
+          </p>
+
+          <div class="layout-demo">
+            <div class="layout-demo-title">2열 그리드</div>
+            <div class="grid-demo grid-demo-2col">
+              <div class="layout-demo-box">1</div>
+              <div class="layout-demo-box">2</div>
+              <div class="layout-demo-box">3</div>
+              <div class="layout-demo-box">4</div>
+            </div>
+          </div>
+
+          <div class="layout-demo">
+            <div class="layout-demo-title">3열 그리드</div>
+            <div class="grid-demo grid-demo-3col">
+              <div class="layout-demo-box">1</div>
+              <div class="layout-demo-box">2</div>
+              <div class="layout-demo-box">3</div>
+              <div class="layout-demo-box">4</div>
+              <div class="layout-demo-box">5</div>
+              <div class="layout-demo-box">6</div>
+            </div>
+          </div>
+
+          <div class="layout-demo">
+            <div class="layout-demo-title">자동 채움 그리드 (auto-fill)</div>
+            <div class="grid-demo grid-demo-auto">
+              <div class="layout-demo-box">1</div>
+              <div class="layout-demo-box">2</div>
+              <div class="layout-demo-box">3</div>
+              <div class="layout-demo-box">4</div>
+              <div class="layout-demo-box">5</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 반응형 동작 -->
+        <div class="subsection">
+          <h2 class="subsection-title">반응형 동작</h2>
+          <p class="subsection-description">
+            화면 크기에 따라 레이아웃이 자동으로 조정됩니다. 브라우저 창 크기를 조절해 보세요.
+          </p>
+
+          <div class="responsive-demo">
+            <div class="responsive-demo-info">
+              <span class="responsive-demo-badge">반응형</span>
+              <span>화면 크기에 따라 열 수가 자동 조정됩니다</span>
+            </div>
+            <div class="card-grid">
+              <div class="card card-hover">
+                <div class="card-body">
+                  <h3 class="card-title">카드 1</h3>
+                  <p class="card-description">반응형 그리드 내의 카드입니다.</p>
+                </div>
+              </div>
+              <div class="card card-hover">
+                <div class="card-body">
+                  <h3 class="card-title">카드 2</h3>
+                  <p class="card-description">반응형 그리드 내의 카드입니다.</p>
+                </div>
+              </div>
+              <div class="card card-hover">
+                <div class="card-body">
+                  <h3 class="card-title">카드 3</h3>
+                  <p class="card-description">반응형 그리드 내의 카드입니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 네비게이션 섹션 -->
+      <section id="navigation" class="section">
+        <h1 class="section-title">네비게이션</h1>
+        <p class="section-description">
+          사용자가 페이지를 탐색할 수 있도록 돕는 네비게이션 컴포넌트입니다. 
+          탭, 브레드크럼, 메뉴 등을 포함합니다.
+        </p>
+
+        <!-- 상단 네비게이션 바 -->
+        <div class="subsection">
+          <h2 class="subsection-title">상단 네비게이션 바</h2>
+          <p class="subsection-description">
+            페이지 상단에 위치하는 메인 네비게이션입니다.
+          </p>
+
+          <div class="nav-demo-container">
+            <nav class="navbar">
+              <div class="navbar-brand">Logo</div>
+              <div class="navbar-menu">
+                <a href="#" class="navbar-link active">홈</a>
+                <a href="#" class="navbar-link">제품</a>
+                <a href="#" class="navbar-link">서비스</a>
+                <a href="#" class="navbar-link">소개</a>
+                <a href="#" class="navbar-link">문의</a>
+              </div>
+              <div class="navbar-actions">
+                <button class="btn btn-ghost btn-sm">로그인</button>
+                <button class="btn btn-primary btn-sm">시작하기</button>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        <!-- 탭 네비게이션 -->
+        <div class="subsection">
+          <h2 class="subsection-title">탭</h2>
+          <p class="subsection-description">
+            콘텐츠를 전환하는 탭 네비게이션입니다.
+          </p>
+
+          <div class="component-sample-box">
+            <div class="component-sample-title">기본 탭</div>
+            <div class="tabs">
+              <button class="tab active">전체</button>
+              <button class="tab">진행중</button>
+              <button class="tab">완료</button>
+              <button class="tab">보류</button>
+            </div>
+          </div>
+
+          <div class="component-sample-box">
+            <div class="component-sample-title">박스 스타일 탭</div>
+            <div class="tabs-boxed">
+              <button class="tab active">일간</button>
+              <button class="tab">주간</button>
+              <button class="tab">월간</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 브레드크럼 -->
+        <div class="subsection">
+          <h2 class="subsection-title">브레드크럼</h2>
+          <p class="subsection-description">
+            현재 페이지의 위치를 계층적으로 표시합니다.
+          </p>
+
+          <div class="component-sample-box">
+            <nav class="breadcrumb">
+              <div class="breadcrumb-item">
+                <a href="#">홈</a>
+              </div>
+              <span class="breadcrumb-separator">/</span>
+              <div class="breadcrumb-item">
+                <a href="#">제품</a>
+              </div>
+              <span class="breadcrumb-separator">/</span>
+              <div class="breadcrumb-item">
+                <a href="#">카테고리</a>
+              </div>
+              <span class="breadcrumb-separator">/</span>
+              <div class="breadcrumb-item active">
+                현재 페이지
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        <!-- 페이지네이션 -->
+        <div class="subsection">
+          <h2 class="subsection-title">페이지네이션</h2>
+          <p class="subsection-description">
+            여러 페이지를 탐색하는 컴포넌트입니다.
+          </p>
+
+          <div class="component-sample-box">
+            <nav class="pagination">
+              <button class="pagination-item">‹</button>
+              <button class="pagination-item">1</button>
+              <button class="pagination-item active">2</button>
+              <button class="pagination-item">3</button>
+              <button class="pagination-item">4</button>
+              <button class="pagination-item">5</button>
+              <button class="pagination-item">›</button>
+            </nav>
+          </div>
+        </div>
+
+        <!-- 모바일 네비게이션 -->
+        <div class="subsection">
+          <h2 class="subsection-title">모바일 네비게이션</h2>
+          <p class="subsection-description">
+            모바일 환경에서 사용하는 햄버거 메뉴 패턴입니다.
+          </p>
+
+          <div class="form-samples-grid">
+            <div class="component-sample-box">
+              <div class="component-sample-title">햄버거 아이콘</div>
+              <div class="hamburger-demo">
+                <div class="hamburger-icon" id="hamburgerDemo1">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <span class="text-sm text-secondary">클릭하여 토글</span>
+              </div>
+            </div>
+
+            <div class="component-sample-box">
+              <div class="component-sample-title">열린 상태</div>
+              <div class="hamburger-demo">
+                <div class="hamburger-icon open">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <span class="text-sm text-secondary">X 모양으로 변환</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="component-sample-box" style="margin-top: var(--space-4);">
+            <div class="component-sample-title">모바일 메뉴 패널</div>
+            <div class="mobile-menu-panel" style="max-width: 300px;">
+              <a href="#" class="mobile-menu-link active">홈</a>
+              <a href="#" class="mobile-menu-link">제품</a>
+              <a href="#" class="mobile-menu-link">서비스</a>
+              <a href="#" class="mobile-menu-link">소개</a>
+              <a href="#" class="mobile-menu-link">문의</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 피드백 섹션 -->
+      <section id="feedback" class="section">
+        <h1 class="section-title">피드백</h1>
+        <p class="section-description">
+          사용자에게 상태나 결과를 알려주는 피드백 컴포넌트입니다. 
+          토스트, 모달, 알림 등을 포함합니다.
+        </p>
+
+        <!-- 토스트 알림 -->
+        <div class="subsection">
+          <h2 class="subsection-title">토스트 알림</h2>
+          <p class="subsection-description">
+            일시적인 알림 메시지입니다. 버튼을 클릭하여 실제 동작을 확인하세요.
+          </p>
+
+          <div class="component-sample-box">
+            <div class="component-sample-title">토스트 데모</div>
+            <div class="btn-group">
+              <button class="btn btn-primary btn-sm" data-toast-demo="success">성공 토스트</button>
+              <button class="btn btn-secondary btn-sm" data-toast-demo="info">정보 토스트</button>
+              <button class="btn btn-outline btn-sm" data-toast-demo="warning">경고 토스트</button>
+              <button class="btn btn-destructive btn-sm" data-toast-demo="error">오류 토스트</button>
+            </div>
+          </div>
+
+          <div class="feedback-demo-grid" style="margin-top: var(--space-6);">
+            <div class="toast toast-success">
+              <div class="toast-icon">✓</div>
+              <div class="toast-content">
+                <div class="toast-title">성공</div>
+                <div class="toast-message">작업이 성공적으로 완료되었습니다.</div>
+              </div>
+              <button class="toast-close">✕</button>
+            </div>
+
+            <div class="toast toast-info">
+              <div class="toast-icon">ℹ</div>
+              <div class="toast-content">
+                <div class="toast-title">정보</div>
+                <div class="toast-message">새로운 업데이트가 있습니다.</div>
+              </div>
+              <button class="toast-close">✕</button>
+            </div>
+
+            <div class="toast toast-warning">
+              <div class="toast-icon">⚠</div>
+              <div class="toast-content">
+                <div class="toast-title">경고</div>
+                <div class="toast-message">저장하지 않은 변경사항이 있습니다.</div>
+              </div>
+              <button class="toast-close">✕</button>
+            </div>
+
+            <div class="toast toast-error">
+              <div class="toast-icon">✕</div>
+              <div class="toast-content">
+                <div class="toast-title">오류</div>
+                <div class="toast-message">요청을 처리하는 중 오류가 발생했습니다.</div>
+              </div>
+              <button class="toast-close">✕</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 알림 배너 -->
+        <div class="subsection">
+          <h2 class="subsection-title">알림 배너</h2>
+          <p class="subsection-description">
+            페이지 내에 고정되는 알림 메시지입니다.
+          </p>
+
+          <div class="feedback-demo-item" style="gap: var(--space-4);">
+            <div class="alert alert-success">
+              <div class="alert-icon">✓</div>
+              <div class="alert-content">
+                <div class="alert-title">저장 완료</div>
+                <div class="alert-message">변경사항이 성공적으로 저장되었습니다.</div>
+              </div>
+            </div>
+
+            <div class="alert alert-info">
+              <div class="alert-icon">ℹ</div>
+              <div class="alert-content">
+                <div class="alert-title">알림</div>
+                <div class="alert-message">시스템 점검이 예정되어 있습니다. 자세한 내용을 확인하세요.</div>
+              </div>
+            </div>
+
+            <div class="alert alert-warning">
+              <div class="alert-icon">⚠</div>
+              <div class="alert-content">
+                <div class="alert-title">주의</div>
+                <div class="alert-message">비밀번호가 90일 이상 변경되지 않았습니다.</div>
+              </div>
+            </div>
+
+            <div class="alert alert-error">
+              <div class="alert-icon">✕</div>
+              <div class="alert-content">
+                <div class="alert-title">오류 발생</div>
+                <div class="alert-message">서버와의 연결이 끊어졌습니다. 잠시 후 다시 시도해주세요.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 모달 -->
+        <div class="subsection">
+          <h2 class="subsection-title">모달</h2>
+          <p class="subsection-description">
+            사용자의 주의를 집중시키는 다이얼로그입니다.
+          </p>
+
+          <div class="component-sample-box">
+            <div class="component-sample-title">모달 데모</div>
+            <button class="btn btn-primary btn-md" id="openModalDemo">모달 열기</button>
+          </div>
+
+          <!-- 모달 백드롭 -->
+          <div class="modal-backdrop" id="demoModalBackdrop">
+            <div class="modal">
+              <div class="modal-header">
+                <h3 class="modal-title">모달 제목</h3>
+                <button class="modal-close" data-close-modal>✕</button>
+              </div>
+              <div class="modal-body">
+                <p style="color: var(--color-text-secondary);">
+                  모달 내용이 여기에 표시됩니다. 사용자에게 중요한 정보를 전달하거나 
+                  확인이 필요한 작업을 수행할 때 사용합니다.
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-ghost btn-md" data-close-modal>취소</button>
+                <button class="btn btn-primary btn-md" data-close-modal>확인</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 툴팁 -->
+        <div class="subsection">
+          <h2 class="subsection-title">툴팁</h2>
+          <p class="subsection-description">
+            요소에 마우스를 올리면 추가 정보를 표시합니다.
+          </p>
+
+          <div class="component-sample-box">
+            <div class="btn-group">
+              <div class="tooltip-wrapper">
+                <button class="btn btn-primary btn-md">마우스를 올려보세요</button>
+                <div class="tooltip">이것은 툴팁입니다</div>
+              </div>
+
+              <div class="tooltip-wrapper">
+                <button class="btn btn-secondary btn-md">저장</button>
+                <div class="tooltip">변경사항을 저장합니다 (Ctrl+S)</div>
+              </div>
+
+              <div class="tooltip-wrapper">
+                <button class="btn btn-outline btn-md">도움말</button>
+                <div class="tooltip">자세한 사용 방법을 확인하세요</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 트렌드 섹션 -->
+      <section id="trends" class="section">
+        <h1 class="section-title">트렌드</h1>
+        <p class="section-description">
+          최신 UI 디자인 트렌드와 활용 팁을 소개합니다. 
+          글래스모피즘, 뉴모피즘, 마이크로 인터랙션 등을 다룹니다.
+        </p>
+
+        <!-- 글래스모피즘 -->
+        <div class="subsection">
+          <h2 class="subsection-title">글래스모피즘 (Glassmorphism)</h2>
+          <p class="subsection-description">
+            반투명 배경과 블러 효과로 유리 같은 느낌을 주는 디자인 트렌드입니다.
+          </p>
+
+          <div class="trend-card">
+            <div class="glassmorphism-demo">
+              <div class="glass-card">
+                <div class="glass-card-title">Glass Card</div>
+                <div class="glass-card-text">
+                  backdrop-filter와 반투명 배경을 사용하여 깊이감 있는 UI를 만들 수 있습니다.
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: var(--space-4);">
+              <div class="component-sample-title">CSS 코드</div>
+              <pre><code>.glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+}</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- 뉴모피즘 -->
+        <div class="subsection">
+          <h2 class="subsection-title">뉴모피즘 (Neumorphism)</h2>
+          <p class="subsection-description">
+            부드러운 그림자로 요소가 표면에서 돌출되거나 함몰된 것처럼 보이게 하는 디자인입니다.
+          </p>
+
+          <div class="trend-card">
+            <div class="neumorphism-demo">
+              <div class="neu-card">
+                <div class="neu-card-title">Neu Card</div>
+                <div class="neu-card-text">부드러운 그림자 효과</div>
+              </div>
+              <button class="neu-button">Neu Button</button>
+            </div>
+
+            <div style="margin-top: var(--space-4);">
+              <div class="component-sample-title">CSS 코드</div>
+              <pre><code>.neumorphism {
+  background: #e0e5ec;
+  border-radius: 16px;
+  box-shadow: 
+    8px 8px 16px #b8bec7,
+    -8px -8px 16px #ffffff;
+}</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- 마이크로 인터랙션 -->
+        <div class="subsection">
+          <h2 class="subsection-title">마이크로 인터랙션</h2>
+          <p class="subsection-description">
+            작은 애니메이션으로 사용자 경험을 향상시키는 인터랙션입니다.
+          </p>
+
+          <div class="trend-card">
+            <div class="micro-interaction-demo">
+              <div class="micro-demo-item">
+                <div class="hover-scale"></div>
+                <span class="micro-demo-label">호버 스케일</span>
+              </div>
+              <div class="micro-demo-item">
+                <div class="hover-rotate"></div>
+                <span class="micro-demo-label">호버 회전</span>
+              </div>
+              <div class="micro-demo-item">
+                <div class="pulse-animation"></div>
+                <span class="micro-demo-label">펄스</span>
+              </div>
+              <div class="micro-demo-item">
+                <div class="bounce-animation"></div>
+                <span class="micro-demo-label">바운스</span>
+              </div>
+            </div>
+
+            <div style="margin-top: var(--space-4);">
+              <div class="component-sample-title">CSS 코드</div>
+              <pre><code>/* 호버 스케일 */
+.hover-scale:hover {
+  transform: scale(1.1);
+}
+
+/* 펄스 애니메이션 */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- 팁 섹션 -->
+        <div class="subsection">
+          <h2 class="subsection-title">실용적인 팁</h2>
+          <p class="subsection-description">
+            더 나은 UI를 만들기 위한 실용적인 팁들입니다.
+          </p>
+
+          <div class="tips-grid">
+            <div class="tip-card">
+              <div class="tip-card-icon">♿</div>
+              <div class="tip-card-title">접근성</div>
+              <div class="tip-card-text">
+                색상 대비 비율 4.5:1 이상 유지, 키보드 네비게이션 지원, 
+                스크린 리더 호환성을 고려하세요.
+              </div>
+            </div>
+
+            <div class="tip-card">
+              <div class="tip-card-icon">⚡</div>
+              <div class="tip-card-title">성능</div>
+              <div class="tip-card-text">
+                transform과 opacity만 애니메이션하고, will-change를 적절히 사용하며,
+                불필요한 리플로우를 피하세요.
+              </div>
+            </div>
+
+            <div class="tip-card">
+              <div class="tip-card-icon">📱</div>
+              <div class="tip-card-title">반응형 디자인</div>
+              <div class="tip-card-text">
+                모바일 퍼스트로 설계하고, 터치 타겟은 최소 44px,
+                유동적인 타이포그래피를 사용하세요.
+              </div>
+            </div>
+
+            <div class="tip-card">
+              <div class="tip-card-icon">🎨</div>
+              <div class="tip-card-title">일관성</div>
+              <div class="tip-card-text">
+                디자인 토큰을 활용하고, 컴포넌트를 재사용하며,
+                스타일 가이드를 문서화하세요.
+              </div>
+            </div>
+
+            <div class="tip-card">
+              <div class="tip-card-icon">🌙</div>
+              <div class="tip-card-title">다크 모드</div>
+              <div class="tip-card-text">
+                CSS 변수로 테마를 관리하고, prefers-color-scheme을 활용하며,
+                순수 검정(#000)은 피하세요.
+              </div>
+            </div>
+
+            <div class="tip-card">
+              <div class="tip-card-icon">✨</div>
+              <div class="tip-card-title">마이크로 인터랙션</div>
+              <div class="tip-card-text">
+                피드백은 즉각적으로, 애니메이션은 200-300ms,
+                과도한 효과는 피하세요.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 스타일 가이드 섹션 -->
+      <section id="guide" class="section">
+        <h1 class="section-title">📘 스타일 가이드</h1>
+        <p class="section-description">
+          실용적인 팁을 반영한 현대적인 웹 UI 스타일 가이드입니다.
+          프로젝트에 바로 적용할 수 있는 베스트 프랙티스를 제공합니다.
+        </p>
+
+        <!-- 디자인 토큰 가이드 -->
+        <div class="subsection">
+          <h2 class="subsection-title">📦 디자인 토큰</h2>
+          
+          <div class="guide-card">
+            <h3 class="guide-card-title">색상 시스템</h3>
+            <div class="code-block">
+              <div class="code-block-header">
+                <span class="code-block-title">CSS</span>
+              </div>
+              <pre class="code-content"><code>/* Primary - 주요 액션, 브랜드 색상 */
+--color-primary-500: #3b82f6;
+--color-primary-600: #2563eb;  /* 호버 상태 */
+--color-primary-700: #1d4ed8;  /* 액티브 상태 */
+
+/* Semantic - 상태 표현 */
+--color-success: #22c55e;  /* 성공, 완료 */
+--color-warning: #f59e0b;  /* 경고, 주의 */
+--color-error: #ef4444;    /* 오류, 삭제 */
+--color-info: #3b82f6;     /* 정보, 안내 */</code></pre>
+            </div>
+            <div class="guide-tip">
+              <span class="guide-tip-icon">💡</span>
+              <span class="guide-tip-text">색상은 50~900 스케일로 정의하면 다크모드 대응이 쉬워집니다.</span>
+            </div>
+          </div>
+
+          <div class="guide-card">
+            <h3 class="guide-card-title">타이포그래피</h3>
+            <div class="code-block">
+              <div class="code-block-header">
+                <span class="code-block-title">CSS</span>
+              </div>
+              <pre class="code-content"><code>/* 폰트 스케일 */
+--text-xs: 0.75rem;   /* 12px - 캡션, 라벨 */
+--text-sm: 0.875rem;  /* 14px - 보조 텍스트 */
+--text-base: 1rem;    /* 16px - 본문 기본 */
+--text-lg: 1.125rem;  /* 18px - 강조 본문 */
+--text-xl: 1.25rem;   /* 20px - 소제목 */
+--text-2xl: 1.5rem;   /* 24px - 섹션 제목 */
+--text-3xl: 1.875rem; /* 30px - 페이지 제목 */</code></pre>
+            </div>
+            <div class="guide-tip">
+              <span class="guide-tip-icon">💡</span>
+              <span class="guide-tip-text">본문은 16px 이상, 줄 높이는 1.5~1.75를 유지하세요.</span>
+            </div>
+          </div>
+
+          <div class="guide-card">
+            <h3 class="guide-card-title">간격 시스템 (4px 기반)</h3>
+            <div class="code-block">
+              <div class="code-block-header">
+                <span class="code-block-title">CSS</span>
+              </div>
+              <pre class="code-content"><code>--space-1: 0.25rem;  /* 4px */
+--space-2: 0.5rem;   /* 8px */
+--space-3: 0.75rem;  /* 12px */
+--space-4: 1rem;     /* 16px */
+--space-6: 1.5rem;   /* 24px */
+--space-8: 2rem;     /* 32px */</code></pre>
+            </div>
+            <div class="guide-tip">
+              <span class="guide-tip-icon">💡</span>
+              <span class="guide-tip-text">4px 또는 8px 배수로 통일하면 시각적 일관성이 높아집니다.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 버튼 가이드 -->
+        <div class="subsection">
+          <h2 class="subsection-title">🔘 버튼</h2>
+          
+          <div class="guide-card">
+            <h3 class="guide-card-title">변형별 용도</h3>
+            <div class="guide-table-wrapper">
+              <table class="guide-table">
+                <thead>
+                  <tr>
+                    <th>변형</th>
+                    <th>용도</th>
+                    <th>예시</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="badge badge-primary">Primary</span></td>
+                    <td>주요 액션 (페이지당 1개 권장)</td>
+                    <td>저장, 제출, 구매</td>
+                  </tr>
+                  <tr>
+                    <td><span class="badge badge-secondary">Secondary</span></td>
+                    <td>보조 액션</td>
+                    <td>취소, 이전</td>
+                  </tr>
+                  <tr>
+                    <td><span class="badge badge-outline">Outline</span></td>
+                    <td>대안 액션</td>
+                    <td>더보기, 필터</td>
+                  </tr>
+                  <tr>
+                    <td><span class="badge badge-ghost">Ghost</span></td>
+                    <td>최소 강조</td>
+                    <td>닫기, 메뉴 항목</td>
+                  </tr>
+                  <tr>
+                    <td><span class="badge badge-destructive">Destructive</span></td>
+                    <td>위험한 액션</td>
+                    <td>삭제, 탈퇴</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="guide-tip">
+              <span class="guide-tip-icon">💡</span>
+              <span class="guide-tip-text">모바일에서는 터치 영역 최소 44x44px을 확보하세요.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 폼 가이드 -->
+        <div class="subsection">
+          <h2 class="subsection-title">📝 폼 컴포넌트</h2>
+          
+          <div class="guide-card">
+            <h3 class="guide-card-title">입력 필드 상태</h3>
+            <div class="code-block">
+              <div class="code-block-header">
+                <span class="code-block-title">CSS</span>
+              </div>
+              <pre class="code-content"><code>/* 기본 */
+border: 1px solid var(--color-border);
+
+/* 포커스 - 명확한 피드백 */
+border-color: var(--color-primary-500);
+box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+
+/* 에러 */
+border-color: var(--color-error);
+
+/* 비활성화 */
+background-color: var(--color-bg-secondary);
+cursor: not-allowed;</code></pre>
+            </div>
+            <div class="guide-tip">
+              <span class="guide-tip-icon">💡</span>
+              <span class="guide-tip-text">placeholder는 힌트용으로만, 라벨 대체 금지!</span>
+            </div>
+          </div>
+
+          <div class="guide-card">
+            <h3 class="guide-card-title">폼 레이아웃 팁</h3>
+            <ul class="guide-list">
+              <li>라벨은 입력 필드 위에 배치 (모바일 친화적)</li>
+              <li>필수 필드는 <code>*</code> 표시</li>
+              <li>에러 메시지는 필드 바로 아래에</li>
+              <li>관련 필드는 그룹으로 묶기</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 접근성 가이드 -->
+        <div class="subsection">
+          <h2 class="subsection-title">♿ 접근성</h2>
+          
+          <div class="guide-card">
+            <h3 class="guide-card-title">필수 사항</h3>
+            <ul class="guide-checklist">
+              <li><strong>색상 대비:</strong> WCAG 2.1 AA 기준 (4.5:1 이상)</li>
+              <li><strong>키보드 네비게이션:</strong> Tab, Enter, ESC 지원</li>
+              <li><strong>포커스 표시:</strong> 명확한 포커스 링</li>
+              <li><strong>ARIA 레이블:</strong> 아이콘 버튼에 필수</li>
+            </ul>
+            <div class="code-block">
+              <div class="code-block-header">
+                <span class="code-block-title">CSS</span>
+              </div>
+              <pre class="code-content"><code>/* 포커스 링 */
+:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}</code></pre>
+            </div>
+            <div class="guide-tip">
+              <span class="guide-tip-icon">💡</span>
+              <span class="guide-tip-text">키보드만으로 모든 기능을 사용할 수 있는지 테스트하세요.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 다크모드 가이드 -->
+        <div class="subsection">
+          <h2 class="subsection-title">🌙 다크모드</h2>
+          
+          <div class="guide-card">
+            <h3 class="guide-card-title">구현 방법</h3>
+            <div class="code-block">
+              <div class="code-block-header">
+                <span class="code-block-title">CSS</span>
+              </div>
+              <pre class="code-content"><code>/* CSS 변수로 테마 정의 */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #18181b;
+}
+
+[data-theme="dark"] {
+  --color-bg: #18181b;
+  --color-text: #fafafa;
+}
+
+/* 시스템 테마 자동 감지 */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: #18181b;
+    --color-text: #fafafa;
+  }
+}</code></pre>
+            </div>
+          </div>
+
+          <div class="guide-card">
+            <h3 class="guide-card-title">체크리스트</h3>
+            <ul class="guide-checklist">
+              <li>모든 색상을 CSS 변수로 정의</li>
+              <li>그림자 강도 조절 (다크모드에서 더 강하게)</li>
+              <li>이미지/아이콘 대비 확인</li>
+              <li>localStorage에 사용자 선택 저장</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 성능 가이드 -->
+        <div class="subsection">
+          <h2 class="subsection-title">⚡ 성능</h2>
+          
+          <div class="guide-card">
+            <h3 class="guide-card-title">애니메이션 최적화</h3>
+            <div class="code-block">
+              <div class="code-block-header">
+                <span class="code-block-title">CSS</span>
+              </div>
+              <pre class="code-content"><code>/* 부드러운 전환 */
+transition: all 0.2s ease;
+
+/* 복잡한 애니메이션은 transform 사용 */
+transform: translateY(-4px);  /* ✅ 좋음 */
+top: -4px;                    /* ❌ 피하기 */
+
+/* 모션 감소 설정 존중 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}</code></pre>
+            </div>
+            <div class="guide-tip">
+              <span class="guide-tip-icon">💡</span>
+              <span class="guide-tip-text">CSS 변수 사용으로 중복을 제거하고, 불필요한 애니메이션은 피하세요.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 참고 자료 -->
+        <div class="subsection">
+          <h2 class="subsection-title">🔗 참고 자료</h2>
+          
+          <div class="guide-links">
+            <a href="https://tailwindcss.com" target="_blank" rel="noopener" class="guide-link-card">
+              <div class="guide-link-title">Tailwind CSS</div>
+              <div class="guide-link-desc">유틸리티 클래스 참고</div>
+            </a>
+            <a href="https://www.radix-ui.com" target="_blank" rel="noopener" class="guide-link-card">
+              <div class="guide-link-title">Radix UI</div>
+              <div class="guide-link-desc">접근성 좋은 컴포넌트</div>
+            </a>
+            <a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank" rel="noopener" class="guide-link-card">
+              <div class="guide-link-title">WCAG 2.1</div>
+              <div class="guide-link-desc">접근성 가이드라인</div>
+            </a>
+            <a href="https://css-tricks.com" target="_blank" rel="noopener" class="guide-link-card">
+              <div class="guide-link-title">CSS Tricks</div>
+              <div class="guide-link-desc">CSS 팁과 트릭</div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- JavaScript 파일 -->
+  <script src="js/theme.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/code-copy.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

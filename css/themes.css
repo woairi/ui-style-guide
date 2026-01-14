@@ -1,0 +1,740 @@
+/* ==========================================================================
+   테마 스타일 (Theme Styles)
+   - 라이트/다크 모드 전환을 위한 추가 스타일
+   - Requirements: 9.2
+   ========================================================================== */
+
+/* ==========================================================================
+   테마 전환 트랜지션
+   ========================================================================== */
+
+/* 테마 전환 시 부드러운 애니메이션 */
+html {
+  transition: background-color var(--transition-normal),
+              color var(--transition-normal);
+}
+
+html.theme-transitioning,
+html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after {
+  transition: background-color var(--transition-normal),
+              border-color var(--transition-normal),
+              color var(--transition-normal),
+              box-shadow var(--transition-normal),
+              fill var(--transition-normal),
+              stroke var(--transition-normal) !important;
+}
+
+/* ==========================================================================
+   다크 모드 - 헤더 및 네비게이션
+   ========================================================================== */
+
+[data-theme="dark"] .header {
+  background-color: var(--color-surface);
+  border-bottom-color: var(--color-border);
+}
+
+[data-theme="dark"] .header-logo {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .header-nav-link {
+  color: var(--color-text-secondary);
+}
+
+[data-theme="dark"] .header-nav-link:hover {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .sidebar {
+  background-color: var(--color-surface);
+  border-right-color: var(--color-border);
+}
+
+[data-theme="dark"] .sidebar-section-title {
+  color: var(--color-text-tertiary);
+  border-top-color: var(--color-border);
+}
+
+[data-theme="dark"] .sidebar-link {
+  color: var(--color-text-secondary);
+}
+
+[data-theme="dark"] .sidebar-link:hover {
+  background-color: var(--color-bg-tertiary);
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .sidebar-link.active {
+  background-color: rgba(59, 130, 246, 0.15);
+  color: var(--color-primary-400);
+  border-left-color: var(--color-primary-400);
+}
+
+/* ==========================================================================
+   다크 모드 - 메인 콘텐츠
+   ========================================================================== */
+
+[data-theme="dark"] .main-content {
+  background-color: var(--color-bg);
+}
+
+[data-theme="dark"] .section-title {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .section-description {
+  color: var(--color-text-secondary);
+}
+
+[data-theme="dark"] .subsection-title {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .subsection-description {
+  color: var(--color-text-secondary);
+}
+
+/* ==========================================================================
+   다크 모드 - 디자인 토큰 섹션
+   ========================================================================== */
+
+[data-theme="dark"] .color-palette-title {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .color-scale {
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .semantic-color-card {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .semantic-color-name {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .semantic-color-desc {
+  color: var(--color-text-tertiary);
+}
+
+[data-theme="dark"] .typography-sample {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .typography-sample-info {
+  border-top-color: var(--color-border);
+}
+
+[data-theme="dark"] .typography-info-value {
+  background-color: var(--color-bg-tertiary);
+  color: var(--color-text-secondary);
+}
+
+[data-theme="dark"] .spacing-item {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .spacing-name {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .spacing-horizontal-demo {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .spacing-horizontal-bar {
+  background-color: rgba(59, 130, 246, 0.2);
+  border-color: var(--color-primary-400);
+}
+
+/* ==========================================================================
+   다크 모드 - 컴포넌트 샘플 박스
+   ========================================================================== */
+
+[data-theme="dark"] .component-sample-box {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .component-sample-title {
+  color: var(--color-text);
+}
+
+/* ==========================================================================
+   다크 모드 - 폼 컴포넌트
+   ========================================================================== */
+
+[data-theme="dark"] .input {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .input::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+[data-theme="dark"] .input:hover {
+  border-color: var(--color-border-strong);
+}
+
+[data-theme="dark"] .input:focus {
+  border-color: var(--color-primary-400);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+[data-theme="dark"] .input:disabled {
+  background-color: var(--color-bg-tertiary);
+  color: var(--color-text-tertiary);
+}
+
+[data-theme="dark"] .textarea {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .textarea::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+[data-theme="dark"] .textarea:focus {
+  border-color: var(--color-primary-400);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+[data-theme="dark"] .select {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+  color: var(--color-text);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23a1a1aa' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+[data-theme="dark"] .select:focus {
+  border-color: var(--color-primary-400);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+[data-theme="dark"] .checkbox {
+  background-color: var(--color-surface);
+  border-color: var(--color-border-strong);
+}
+
+[data-theme="dark"] .checkbox:hover {
+  border-color: var(--color-primary-400);
+}
+
+[data-theme="dark"] .checkbox:checked {
+  background-color: var(--color-primary-500);
+  border-color: var(--color-primary-500);
+}
+
+[data-theme="dark"] .radio {
+  background-color: var(--color-surface);
+  border-color: var(--color-border-strong);
+}
+
+[data-theme="dark"] .radio:hover {
+  border-color: var(--color-primary-400);
+}
+
+[data-theme="dark"] .radio:checked {
+  border-color: var(--color-primary-400);
+}
+
+[data-theme="dark"] .radio:checked::after {
+  background-color: var(--color-primary-400);
+}
+
+[data-theme="dark"] .form-label {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .form-hint {
+  color: var(--color-text-tertiary);
+}
+
+[data-theme="dark"] .form-sample-card {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .form-sample-title {
+  color: var(--color-text);
+}
+
+/* ==========================================================================
+   다크 모드 - 카드 컴포넌트
+   ========================================================================== */
+
+[data-theme="dark"] .card {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .card-header {
+  border-bottom-color: var(--color-border);
+}
+
+[data-theme="dark"] .card-footer {
+  border-top-color: var(--color-border);
+  background-color: var(--color-bg-secondary);
+}
+
+[data-theme="dark"] .card-title {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .card-description {
+  color: var(--color-text-secondary);
+}
+
+[data-theme="dark"] .card-interactive:hover {
+  border-color: var(--color-primary-400);
+}
+
+[data-theme="dark"] .card-image-placeholder {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(139, 92, 246, 0.3) 100%);
+  color: var(--color-primary-300);
+}
+
+/* ==========================================================================
+   다크 모드 - 레이아웃 데모
+   ========================================================================== */
+
+[data-theme="dark"] .layout-demo {
+  background-color: var(--color-bg-secondary);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .layout-demo-title {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .responsive-demo {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .responsive-demo-info {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-secondary);
+}
+
+/* ==========================================================================
+   다크 모드 - 네비게이션 컴포넌트
+   ========================================================================== */
+
+[data-theme="dark"] .navbar {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .navbar-brand {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .navbar-link {
+  color: var(--color-text-secondary);
+}
+
+[data-theme="dark"] .navbar-link:hover {
+  color: var(--color-text);
+  background-color: var(--color-bg-tertiary);
+}
+
+[data-theme="dark"] .tabs {
+  border-bottom-color: var(--color-border);
+}
+
+[data-theme="dark"] .tab {
+  color: var(--color-text-secondary);
+}
+
+[data-theme="dark"] .tab:hover {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .tabs-boxed {
+  background-color: var(--color-bg-secondary);
+}
+
+[data-theme="dark"] .tabs-boxed .tab.active {
+  background-color: var(--color-surface);
+}
+
+[data-theme="dark"] .breadcrumb {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .breadcrumb-item {
+  color: var(--color-text-secondary);
+}
+
+[data-theme="dark"] .breadcrumb-item:hover {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .breadcrumb-item.active {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .breadcrumb-separator {
+  color: var(--color-text-tertiary);
+}
+
+/* ==========================================================================
+   다크 모드 - 피드백 컴포넌트
+   ========================================================================== */
+
+[data-theme="dark"] .toast {
+  background-color: var(--color-surface-elevated);
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .toast-success {
+  background-color: rgba(34, 197, 94, 0.15);
+  border-color: var(--color-success-500);
+}
+
+[data-theme="dark"] .toast-info {
+  background-color: rgba(59, 130, 246, 0.15);
+  border-color: var(--color-info-500);
+}
+
+[data-theme="dark"] .toast-warning {
+  background-color: rgba(245, 158, 11, 0.15);
+  border-color: var(--color-warning-500);
+}
+
+[data-theme="dark"] .toast-error {
+  background-color: rgba(239, 68, 68, 0.15);
+  border-color: var(--color-error-500);
+}
+
+[data-theme="dark"] .alert {
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .alert-success {
+  background-color: rgba(34, 197, 94, 0.1);
+  border-color: var(--color-success-500);
+}
+
+[data-theme="dark"] .alert-info {
+  background-color: rgba(59, 130, 246, 0.1);
+  border-color: var(--color-info-500);
+}
+
+[data-theme="dark"] .alert-warning {
+  background-color: rgba(245, 158, 11, 0.1);
+  border-color: var(--color-warning-500);
+}
+
+[data-theme="dark"] .alert-error {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-color: var(--color-error-500);
+}
+
+[data-theme="dark"] .modal {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .modal-header {
+  border-bottom-color: var(--color-border);
+}
+
+[data-theme="dark"] .modal-title {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .modal-body {
+  color: var(--color-text-secondary);
+}
+
+[data-theme="dark"] .modal-footer {
+  border-top-color: var(--color-border);
+  background-color: var(--color-bg-secondary);
+}
+
+[data-theme="dark"] .tooltip {
+  background-color: var(--color-neutral-100);
+  color: var(--color-neutral-900);
+}
+
+/* ==========================================================================
+   다크 모드 - 코드 스니펫
+   ========================================================================== */
+
+[data-theme="dark"] .code-block {
+  background-color: var(--color-neutral-900);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .code-block-header {
+  background-color: var(--color-neutral-800);
+  border-bottom-color: var(--color-border);
+}
+
+[data-theme="dark"] .code-block-title {
+  color: var(--color-text-secondary);
+}
+
+[data-theme="dark"] .code-block pre {
+  background-color: transparent;
+  color: var(--color-neutral-100);
+}
+
+[data-theme="dark"] .code-block code {
+  color: var(--color-neutral-100);
+}
+
+[data-theme="dark"] code {
+  background-color: var(--color-bg-tertiary);
+  color: var(--color-primary-300);
+}
+
+/* 구문 하이라이팅 - 다크 모드 */
+[data-theme="dark"] .token.comment,
+[data-theme="dark"] .token.prolog,
+[data-theme="dark"] .token.doctype,
+[data-theme="dark"] .token.cdata {
+  color: #6a9955;
+}
+
+[data-theme="dark"] .token.punctuation {
+  color: #d4d4d4;
+}
+
+[data-theme="dark"] .token.property,
+[data-theme="dark"] .token.tag,
+[data-theme="dark"] .token.boolean,
+[data-theme="dark"] .token.number,
+[data-theme="dark"] .token.constant,
+[data-theme="dark"] .token.symbol {
+  color: #b5cea8;
+}
+
+[data-theme="dark"] .token.selector,
+[data-theme="dark"] .token.attr-name,
+[data-theme="dark"] .token.string,
+[data-theme="dark"] .token.char,
+[data-theme="dark"] .token.builtin {
+  color: #ce9178;
+}
+
+[data-theme="dark"] .token.operator,
+[data-theme="dark"] .token.entity,
+[data-theme="dark"] .token.url {
+  color: #d4d4d4;
+}
+
+[data-theme="dark"] .token.atrule,
+[data-theme="dark"] .token.attr-value,
+[data-theme="dark"] .token.keyword {
+  color: #569cd6;
+}
+
+[data-theme="dark"] .token.function,
+[data-theme="dark"] .token.class-name {
+  color: #dcdcaa;
+}
+
+[data-theme="dark"] .token.regex,
+[data-theme="dark"] .token.important,
+[data-theme="dark"] .token.variable {
+  color: #d16969;
+}
+
+/* ==========================================================================
+   다크 모드 - 트렌드 섹션
+   ========================================================================== */
+
+[data-theme="dark"] .trend-card {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .trend-card-title {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .trend-card-description {
+  color: var(--color-text-secondary);
+}
+
+/* 글래스모피즘 - 다크 모드 */
+[data-theme="dark"] .glass-demo-bg {
+  background: linear-gradient(135deg, var(--color-primary-700) 0%, var(--color-secondary-700) 100%);
+}
+
+/* 뉴모피즘 - 다크 모드 */
+[data-theme="dark"] .neumorphism {
+  background: var(--color-neutral-800);
+  box-shadow: 
+    8px 8px 16px var(--color-neutral-900),
+    -8px -8px 16px var(--color-neutral-700);
+}
+
+[data-theme="dark"] .neumorphism-inset {
+  box-shadow: 
+    inset 4px 4px 8px var(--color-neutral-900),
+    inset -4px -4px 8px var(--color-neutral-700);
+}
+
+/* ==========================================================================
+   다크 모드 - 팁 섹션
+   ========================================================================== */
+
+[data-theme="dark"] .tip-card {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .tip-card-icon {
+  background-color: var(--color-bg-tertiary);
+}
+
+[data-theme="dark"] .tip-card-title {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .tip-card-description {
+  color: var(--color-text-secondary);
+}
+
+/* ==========================================================================
+   다크 모드 - 유틸리티 클래스
+   ========================================================================== */
+
+[data-theme="dark"] .text-primary {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .text-secondary {
+  color: var(--color-text-secondary);
+}
+
+[data-theme="dark"] .text-tertiary {
+  color: var(--color-text-tertiary);
+}
+
+[data-theme="dark"] .bg-surface {
+  background-color: var(--color-surface);
+}
+
+[data-theme="dark"] .bg-secondary {
+  background-color: var(--color-bg-secondary);
+}
+
+[data-theme="dark"] .border {
+  border-color: var(--color-border);
+}
+
+/* ==========================================================================
+   다크 모드 - 스크롤바
+   ========================================================================== */
+
+[data-theme="dark"] ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-600);
+  border-radius: var(--radius-full);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neutral-500);
+}
+
+/* ==========================================================================
+   다크 모드 - 선택 영역
+   ========================================================================== */
+
+[data-theme="dark"] ::selection {
+  background-color: rgba(59, 130, 246, 0.3);
+  color: var(--color-text);
+}
+
+/* ==========================================================================
+   다크 모드 - 모바일 메뉴
+   ========================================================================== */
+
+[data-theme="dark"] .mobile-menu-toggle {
+  background-color: var(--color-bg-secondary);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .mobile-menu-toggle-icon span {
+  background-color: var(--color-text-secondary);
+}
+
+[data-theme="dark"] .sidebar-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* ==========================================================================
+   시스템 테마 자동 감지 (prefers-color-scheme)
+   - data-theme 속성이 없을 때 시스템 설정에 따라 적용
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+  /* 시스템이 다크 모드이고 명시적 테마 설정이 없을 때 */
+  :root:not([data-theme]) .header,
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .header {
+    background-color: var(--color-surface);
+    border-bottom-color: var(--color-border);
+  }
+
+  :root:not([data-theme]) .sidebar,
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .sidebar {
+    background-color: var(--color-surface);
+    border-right-color: var(--color-border);
+  }
+
+  :root:not([data-theme]) .main-content,
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .main-content {
+    background-color: var(--color-bg);
+  }
+
+  :root:not([data-theme]) .card,
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .card {
+    background-color: var(--color-surface);
+    border-color: var(--color-border);
+  }
+
+  :root:not([data-theme]) .component-sample-box,
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .component-sample-box {
+    background-color: var(--color-surface);
+    border-color: var(--color-border);
+  }
+
+  :root:not([data-theme]) .input,
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .input {
+    background-color: var(--color-surface);
+    border-color: var(--color-border);
+    color: var(--color-text);
+  }
+
+  :root:not([data-theme]) code,
+  :root:not([data-theme="light"]):not([data-theme="dark"]) code {
+    background-color: var(--color-bg-tertiary);
+    color: var(--color-primary-300);
+  }
+}

@@ -1,0 +1,2011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI Style Guide</title>
+  
+  <!-- CSS 파일 -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/themes.css">
+  
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <!-- Mobile menu toggle -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu">
+      <div class="mobile-menu-toggle-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+    
+    <div class="header-logo">UI Style Guide</div>
+    
+    <nav class="header-nav">
+      <a href="#tokens" class="header-nav-link">Tokens</a>
+      <a href="#buttons" class="header-nav-link">Buttons</a>
+      <a href="#forms" class="header-nav-link">Forms</a>
+      <a href="#cards" class="header-nav-link">Cards</a>
+    </nav>
+    
+    <div class="header-actions">
+      <a href="index.html" class="lang-toggle" aria-label="Switch to Korean">
+        <span class="lang-toggle-text">KO</span>
+      </a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="theme-toggle-icon"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Sidebar overlay (mobile) -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- Main layout -->
+  <div class="main-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <nav class="sidebar-nav">
+        <div class="sidebar-section-title">Basics</div>
+        <a href="#tokens" class="sidebar-link active" data-section="tokens">Design Tokens</a>
+        <a href="#buttons" class="sidebar-link" data-section="buttons">Buttons</a>
+        <a href="#forms" class="sidebar-link" data-section="forms">Forms</a>
+        
+        <div class="sidebar-section-title">Layout</div>
+        <a href="#cards" class="sidebar-link" data-section="cards">Cards</a>
+        <a href="#navigation" class="sidebar-link" data-section="navigation">Navigation</a>
+        
+        <div class="sidebar-section-title">Interaction</div>
+        <a href="#feedback" class="sidebar-link" data-section="feedback">Feedback</a>
+        <a href="#trends" class="sidebar-link" data-section="trends">Trends</a>
+        
+        <div class="sidebar-section-title">Reference</div>
+        <a href="#guide" class="sidebar-link" data-section="guide">📘 Style Guide</a>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <!-- Design Tokens Section -->
+      <section id="tokens" class="section">
+        <h1 class="section-title">Design Tokens</h1>
+        <p class="section-description">
+          The fundamental units of a design system including colors, typography, and spacing.
+          These core variables help build consistent UI.
+        </p>
+
+        <!-- Color Palette Subsection -->
+        <div class="subsection" id="colors">
+          <h2 class="subsection-title">Color Palette</h2>
+          <p class="subsection-description">
+            Defines primary, secondary, neutral, and semantic colors.
+            Click to copy CSS variables.
+          </p>
+
+          <!-- 프라이머리 Color -->
+          <div class="color-palette-group">
+            <h3 class="color-palette-title">Primary</h3>
+            <div class="color-scale">
+              <div class="color-scale-item" style="background-color: var(--color-primary-50);" data-copy="--color-primary-50">
+                <span class="color-scale-label" style="color: var(--color-primary-900);">50</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-primary-100);" data-copy="--color-primary-100">
+                <span class="color-scale-label" style="color: var(--color-primary-900);">100</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-primary-200);" data-copy="--color-primary-200">
+                <span class="color-scale-label" style="color: var(--color-primary-900);">200</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-primary-300);" data-copy="--color-primary-300">
+                <span class="color-scale-label" style="color: var(--color-primary-900);">300</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-primary-400);" data-copy="--color-primary-400">
+                <span class="color-scale-label" style="color: white;">400</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-primary-500);" data-copy="--color-primary-500">
+                <span class="color-scale-label" style="color: white;">500</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-primary-600);" data-copy="--color-primary-600">
+                <span class="color-scale-label" style="color: white;">600</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-primary-700);" data-copy="--color-primary-700">
+                <span class="color-scale-label" style="color: white;">700</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-primary-800);" data-copy="--color-primary-800">
+                <span class="color-scale-label" style="color: white;">800</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-primary-900);" data-copy="--color-primary-900">
+                <span class="color-scale-label" style="color: white;">900</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 세컨더리 Color -->
+          <div class="color-palette-group">
+            <h3 class="color-palette-title">Secondary</h3>
+            <div class="color-scale">
+              <div class="color-scale-item" style="background-color: var(--color-secondary-50);" data-copy="--color-secondary-50">
+                <span class="color-scale-label" style="color: var(--color-secondary-900);">50</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-secondary-100);" data-copy="--color-secondary-100">
+                <span class="color-scale-label" style="color: var(--color-secondary-900);">100</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-secondary-200);" data-copy="--color-secondary-200">
+                <span class="color-scale-label" style="color: var(--color-secondary-900);">200</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-secondary-300);" data-copy="--color-secondary-300">
+                <span class="color-scale-label" style="color: var(--color-secondary-900);">300</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-secondary-400);" data-copy="--color-secondary-400">
+                <span class="color-scale-label" style="color: white;">400</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-secondary-500);" data-copy="--color-secondary-500">
+                <span class="color-scale-label" style="color: white;">500</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-secondary-600);" data-copy="--color-secondary-600">
+                <span class="color-scale-label" style="color: white;">600</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-secondary-700);" data-copy="--color-secondary-700">
+                <span class="color-scale-label" style="color: white;">700</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-secondary-800);" data-copy="--color-secondary-800">
+                <span class="color-scale-label" style="color: white;">800</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-secondary-900);" data-copy="--color-secondary-900">
+                <span class="color-scale-label" style="color: white;">900</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 뉴트럴 Color -->
+          <div class="color-palette-group">
+            <h3 class="color-palette-title">Neutral</h3>
+            <div class="color-scale">
+              <div class="color-scale-item" style="background-color: var(--color-neutral-50);" data-copy="--color-neutral-50">
+                <span class="color-scale-label" style="color: var(--color-neutral-900);">50</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-neutral-100);" data-copy="--color-neutral-100">
+                <span class="color-scale-label" style="color: var(--color-neutral-900);">100</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-neutral-200);" data-copy="--color-neutral-200">
+                <span class="color-scale-label" style="color: var(--color-neutral-900);">200</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-neutral-300);" data-copy="--color-neutral-300">
+                <span class="color-scale-label" style="color: var(--color-neutral-900);">300</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-neutral-400);" data-copy="--color-neutral-400">
+                <span class="color-scale-label" style="color: white;">400</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-neutral-500);" data-copy="--color-neutral-500">
+                <span class="color-scale-label" style="color: white;">500</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-neutral-600);" data-copy="--color-neutral-600">
+                <span class="color-scale-label" style="color: white;">600</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-neutral-700);" data-copy="--color-neutral-700">
+                <span class="color-scale-label" style="color: white;">700</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-neutral-800);" data-copy="--color-neutral-800">
+                <span class="color-scale-label" style="color: white;">800</span>
+              </div>
+              <div class="color-scale-item" style="background-color: var(--color-neutral-900);" data-copy="--color-neutral-900">
+                <span class="color-scale-label" style="color: white;">900</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 시맨틱 Color -->
+          <div class="color-palette-group">
+            <h3 class="color-palette-title">Semantic</h3>
+            <div class="semantic-colors-grid">
+              <div class="semantic-color-card" data-copy="--color-success-500">
+                <div class="semantic-color-preview" style="background-color: var(--color-success-500);"></div>
+                <div class="semantic-color-info">
+                  <div class="semantic-color-name">Success</div>
+                  <div class="semantic-color-desc">Success, completion, positive state</div>
+                </div>
+              </div>
+              <div class="semantic-color-card" data-copy="--color-warning-500">
+                <div class="semantic-color-preview" style="background-color: var(--color-warning-500);"></div>
+                <div class="semantic-color-info">
+                  <div class="semantic-color-name">Warning</div>
+                  <div class="semantic-color-desc">Warning, attention required</div>
+                </div>
+              </div>
+              <div class="semantic-color-card" data-copy="--color-error-500">
+                <div class="semantic-color-preview" style="background-color: var(--color-error-500);"></div>
+                <div class="semantic-color-info">
+                  <div class="semantic-color-name">Error</div>
+                  <div class="semantic-color-desc">Error, failure, negative state</div>
+                </div>
+              </div>
+              <div class="semantic-color-card" data-copy="--color-info-500">
+                <div class="semantic-color-preview" style="background-color: var(--color-info-500);"></div>
+                <div class="semantic-color-info">
+                  <div class="semantic-color-name">Info</div>
+                  <div class="semantic-color-desc">Information, guidance messages</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Typography Subsection -->
+        <div class="subsection" id="typography">
+          <h2 class="subsection-title">Typography</h2>
+          <p class="subsection-description">
+            Defines text styles for headings, body, and captions by hierarchy.
+          </p>
+
+          <!-- Heading Styles -->
+          <div class="color-palette-group">
+            <h3 class="color-palette-title">Headings</h3>
+            
+            <div class="typography-sample">
+              <h1 class="typography-sample-text">Heading 1 - Main Title</h1>
+              <div class="typography-sample-info">
+                <div class="typography-info-item">
+                  <span class="typography-info-label">Size</span>
+                  <span class="typography-info-value" data-copy="--text-4xl">--text-4xl (36px)</span>
+                </div>
+                <div class="typography-info-item">
+                  <span class="typography-info-label">Weight</span>
+                  <span class="typography-info-value" data-copy="--font-semibold">--font-semibold (600)</span>
+                </div>
+                <div class="typography-info-item">
+                  <span class="typography-info-label">Line Height</span>
+                  <span class="typography-info-value" data-copy="--leading-tight">--leading-tight (1.25)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="typography-sample">
+              <h2 class="typography-sample-text">Heading 2 - Section Title</h2>
+              <div class="typography-sample-info">
+                <div class="typography-info-item">
+                  <span class="typography-info-label">Size</span>
+                  <span class="typography-info-value" data-copy="--text-3xl">--text-3xl (30px)</span>
+                </div>
+                <div class="typography-info-item">
+                  <span class="typography-info-label">Weight</span>
+                  <span class="typography-info-value" data-copy="--font-semibold">--font-semibold (600)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="typography-sample">
+              <h3 class="typography-sample-text">Heading 3 - Subsection Title</h3>
+              <div class="typography-sample-info">
+                <div class="typography-info-item">
+                  <span class="typography-info-label">Size</span>
+                  <span class="typography-info-value" data-copy="--text-2xl">--text-2xl (24px)</span>
+                </div>
+                <div class="typography-info-item">
+                  <span class="typography-info-label">Weight</span>
+                  <span class="typography-info-value" data-copy="--font-semibold">--font-semibold (600)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="typography-sample">
+              <h4 class="typography-sample-text">Heading 4 - Subtitle</h4>
+              <div class="typography-sample-info">
+                <div class="typography-info-item">
+                  <span class="typography-info-label">Size</span>
+                  <span class="typography-info-value" data-copy="--text-xl">--text-xl (20px)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="typography-sample">
+              <h5 class="typography-sample-text">Heading 5 - Small Title</h5>
+              <div class="typography-sample-info">
+                <div class="typography-info-item">
+                  <span class="typography-info-label">Size</span>
+                  <span class="typography-info-value" data-copy="--text-lg">--text-lg (18px)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="typography-sample">
+              <h6 class="typography-sample-text">Heading 6 - Smallest Title</h6>
+              <div class="typography-sample-info">
+                <div class="typography-info-item">
+                  <span class="typography-info-label">Size</span>
+                  <span class="typography-info-value" data-copy="--text-base">--text-base (16px)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 본문 스타일 -->
+          <div class="color-palette-group">
+            <h3 class="color-palette-title">Body</h3>
+            
+            <div class="typography-sample">
+              <p class="typography-sample-text" style="font-size: var(--text-lg); margin-bottom: 0;">
+                Large Body - Large body text. Used for important descriptions or lead paragraphs.
+              </p>
+              <div class="typography-sample-info">
+                <div class="typography-info-item">
+                  <span class="typography-info-label">Size</span>
+                  <span class="typography-info-value" data-copy="--text-lg">--text-lg (18px)</span>
+                </div>
+                <div class="typography-info-item">
+                  <span class="typography-info-label">Line Height</span>
+                  <span class="typography-info-value" data-copy="--leading-relaxed">--leading-relaxed (1.625)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="typography-sample">
+              <p class="typography-sample-text" style="margin-bottom: 0;">
+                Base Body - Default body text. Standard size for general content.
+              </p>
+              <div class="typography-sample-info">
+                <div class="typography-info-item">
+                  <span class="typography-info-label">Size</span>
+                  <span class="typography-info-value" data-copy="--text-base">--text-base (16px)</span>
+                </div>
+                <div class="typography-info-item">
+                  <span class="typography-info-label">Line Height</span>
+                  <span class="typography-info-value" data-copy="--leading-normal">--leading-normal (1.5)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="typography-sample">
+              <p class="typography-sample-text" style="font-size: var(--text-sm); margin-bottom: 0;">
+                Small Body - Small body text. Used for secondary information.
+              </p>
+              <div class="typography-sample-info">
+                <div class="typography-info-item">
+                  <span class="typography-info-label">Size</span>
+                  <span class="typography-info-value" data-copy="--text-sm">--text-sm (14px)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Caption and Others -->
+          <div class="color-palette-group">
+            <h3 class="color-palette-title">Caption and Others</h3>
+            
+            <div class="typography-sample">
+              <span class="caption typography-sample-text" style="display: block;">
+                Caption - Caption text. Used for image descriptions or meta information.
+              </span>
+              <div class="typography-sample-info">
+                <div class="typography-info-item">
+                  <span class="typography-info-label">Size</span>
+                  <span class="typography-info-value" data-copy="--text-xs">--text-xs (12px)</span>
+                </div>
+                <div class="typography-info-item">
+                  <span class="typography-info-label">Color</span>
+                  <span class="typography-info-value" data-copy="--color-text-tertiary">--color-text-tertiary</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="typography-sample">
+              <code class="typography-sample-text">const code = "inline code style";</code>
+              <div class="typography-sample-info">
+                <div class="typography-info-item">
+                  <span class="typography-info-label">Font</span>
+                  <span class="typography-info-value" data-copy="--font-mono">--font-mono</span>
+                </div>
+                <div class="typography-info-item">
+                  <span class="typography-info-label">Background</span>
+                  <span class="typography-info-value" data-copy="--color-bg-tertiary">--color-bg-tertiary</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spacing System Subsection -->
+        <div class="subsection" id="spacing">
+          <h2 class="subsection-title">Spacing System</h2>
+          <p class="subsection-description">
+            A 4px-based spacing system. Used for consistent margins and padding.
+          </p>
+
+          <!-- 간격 그리드 -->
+          <div class="spacing-grid">
+            <div class="spacing-item" data-copy="--space-1">
+              <div class="spacing-visual">
+                <div class="spacing-bar" style="height: 4px;"></div>
+              </div>
+              <div class="spacing-info">
+                <div class="spacing-name">--space-1</div>
+                <div class="spacing-value">4px (0.25rem)</div>
+              </div>
+            </div>
+
+            <div class="spacing-item" data-copy="--space-2">
+              <div class="spacing-visual">
+                <div class="spacing-bar" style="height: 8px;"></div>
+              </div>
+              <div class="spacing-info">
+                <div class="spacing-name">--space-2</div>
+                <div class="spacing-value">8px (0.5rem)</div>
+              </div>
+            </div>
+
+            <div class="spacing-item" data-copy="--space-3">
+              <div class="spacing-visual">
+                <div class="spacing-bar" style="height: 12px;"></div>
+              </div>
+              <div class="spacing-info">
+                <div class="spacing-name">--space-3</div>
+                <div class="spacing-value">12px (0.75rem)</div>
+              </div>
+            </div>
+
+            <div class="spacing-item" data-copy="--space-4">
+              <div class="spacing-visual">
+                <div class="spacing-bar" style="height: 16px;"></div>
+              </div>
+              <div class="spacing-info">
+                <div class="spacing-name">--space-4</div>
+                <div class="spacing-value">16px (1rem)</div>
+              </div>
+            </div>
+
+            <div class="spacing-item" data-copy="--space-5">
+              <div class="spacing-visual">
+                <div class="spacing-bar" style="height: 20px;"></div>
+              </div>
+              <div class="spacing-info">
+                <div class="spacing-name">--space-5</div>
+                <div class="spacing-value">20px (1.25rem)</div>
+              </div>
+            </div>
+
+            <div class="spacing-item" data-copy="--space-6">
+              <div class="spacing-visual">
+                <div class="spacing-bar" style="height: 24px;"></div>
+              </div>
+              <div class="spacing-info">
+                <div class="spacing-name">--space-6</div>
+                <div class="spacing-value">24px (1.5rem)</div>
+              </div>
+            </div>
+
+            <div class="spacing-item" data-copy="--space-8">
+              <div class="spacing-visual">
+                <div class="spacing-bar" style="height: 32px;"></div>
+              </div>
+              <div class="spacing-info">
+                <div class="spacing-name">--space-8</div>
+                <div class="spacing-value">32px (2rem)</div>
+              </div>
+            </div>
+
+            <div class="spacing-item" data-copy="--space-10">
+              <div class="spacing-visual">
+                <div class="spacing-bar" style="height: 40px;"></div>
+              </div>
+              <div class="spacing-info">
+                <div class="spacing-name">--space-10</div>
+                <div class="spacing-value">40px (2.5rem)</div>
+              </div>
+            </div>
+
+            <div class="spacing-item" data-copy="--space-12">
+              <div class="spacing-visual">
+                <div class="spacing-bar" style="height: 48px;"></div>
+              </div>
+              <div class="spacing-info">
+                <div class="spacing-name">--space-12</div>
+                <div class="spacing-value">48px (3rem)</div>
+              </div>
+            </div>
+
+            <div class="spacing-item" data-copy="--space-16">
+              <div class="spacing-visual">
+                <div class="spacing-bar" style="height: 64px;"></div>
+              </div>
+              <div class="spacing-info">
+                <div class="spacing-name">--space-16</div>
+                <div class="spacing-value">64px (4rem)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Horizontal Spacing Visualization -->
+          <div class="color-palette-group" style="margin-top: var(--space-8);">
+            <h3 class="color-palette-title">Horizontal Spacing Visualization</h3>
+            <div class="spacing-horizontal-demo">
+              <div class="spacing-horizontal-item">
+                <span class="spacing-horizontal-label">--space-1 (4px)</span>
+                <div class="spacing-horizontal-bar" style="width: 4px;"></div>
+              </div>
+              <div class="spacing-horizontal-item">
+                <span class="spacing-horizontal-label">--space-2 (8px)</span>
+                <div class="spacing-horizontal-bar" style="width: 8px;"></div>
+              </div>
+              <div class="spacing-horizontal-item">
+                <span class="spacing-horizontal-label">--space-4 (16px)</span>
+                <div class="spacing-horizontal-bar" style="width: 16px;"></div>
+              </div>
+              <div class="spacing-horizontal-item">
+                <span class="spacing-horizontal-label">--space-6 (24px)</span>
+                <div class="spacing-horizontal-bar" style="width: 24px;"></div>
+              </div>
+              <div class="spacing-horizontal-item">
+                <span class="spacing-horizontal-label">--space-8 (32px)</span>
+                <div class="spacing-horizontal-bar" style="width: 32px;"></div>
+              </div>
+              <div class="spacing-horizontal-item">
+                <span class="spacing-horizontal-label">--space-12 (48px)</span>
+                <div class="spacing-horizontal-bar" style="width: 48px;"></div>
+              </div>
+              <div class="spacing-horizontal-item">
+                <span class="spacing-horizontal-label">--space-16 (64px)</span>
+                <div class="spacing-horizontal-bar" style="width: 64px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Buttons Section -->
+      <section id="buttons" class="section">
+        <h1 class="section-title">Buttons</h1>
+        <p class="section-description">
+          Various button styles for different situations. 
+          Supports multiple variants like Primary, Secondary, Outline and different sizes.
+        </p>
+
+        <!-- Button Variants -->
+        <div class="subsection">
+          <h2 class="subsection-title">Button Variants</h2>
+          <p class="subsection-description">
+            Choose the appropriate button style based on usage.
+          </p>
+
+          <div class="component-sample-box">
+            <div class="component-sample-title">Primary</div>
+            <p class="text-sm text-secondary mb-4">Used for primary actions. One Primary button per page is recommended.</p>
+            <div class="component-sample-row">
+              <button class="btn btn-primary btn-sm">Small</button>
+              <button class="btn btn-primary btn-md">Medium</button>
+              <button class="btn btn-primary btn-lg">Large</button>
+            </div>
+          </div>
+
+          <div class="component-sample-box">
+            <div class="component-sample-title">Secondary</div>
+            <p class="text-sm text-secondary mb-4">Used for secondary actions. Works well alongside Primary buttons.</p>
+            <div class="component-sample-row">
+              <button class="btn btn-secondary btn-sm">Small</button>
+              <button class="btn btn-secondary btn-md">Medium</button>
+              <button class="btn btn-secondary btn-lg">Large</button>
+            </div>
+          </div>
+
+          <div class="component-sample-box">
+            <div class="component-sample-title">Outline</div>
+            <p class="text-sm text-secondary mb-4">Used for alternative actions. Visually less emphasized.</p>
+            <div class="component-sample-row">
+              <button class="btn btn-outline btn-sm">Small</button>
+              <button class="btn btn-outline btn-md">Medium</button>
+              <button class="btn btn-outline btn-lg">Large</button>
+            </div>
+          </div>
+
+          <div class="component-sample-box">
+            <div class="component-sample-title">Ghost</div>
+            <p class="text-sm text-secondary mb-4">Used for actions requiring minimal emphasis.</p>
+            <div class="component-sample-row">
+              <button class="btn btn-ghost btn-sm">Small</button>
+              <button class="btn btn-ghost btn-md">Medium</button>
+              <button class="btn btn-ghost btn-lg">Large</button>
+            </div>
+          </div>
+
+          <div class="component-sample-box">
+            <div class="component-sample-title">Destructive</div>
+            <p class="text-sm text-secondary mb-4">Used for dangerous actions like delete or cancel.</p>
+            <div class="component-sample-row">
+              <button class="btn btn-destructive btn-sm">Small</button>
+              <button class="btn btn-destructive btn-md">Medium</button>
+              <button class="btn btn-destructive btn-lg">Large</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Button States -->
+        <div class="subsection">
+          <h2 class="subsection-title">Button States</h2>
+          <p class="subsection-description">
+            Check various button states. Hover over to see the hover state.
+          </p>
+
+          <div class="component-sample-box">
+            <div class="button-states-grid">
+              <div class="button-state-item">
+                <span class="button-state-label">Default</span>
+                <button class="btn btn-primary btn-md">Button</button>
+              </div>
+              <div class="button-state-item">
+                <span class="button-state-label">Hover</span>
+                <button class="btn btn-primary btn-md">Button</button>
+              </div>
+              <div class="button-state-item">
+                <span class="button-state-label">Focus</span>
+                <button class="btn btn-primary btn-md" style="outline: 2px solid var(--color-focus-ring); outline-offset: 2px;">Button</button>
+              </div>
+              <div class="button-state-item">
+                <span class="button-state-label">Disabled</span>
+                <button class="btn btn-primary btn-md" disabled>Button</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Button Size Comparison -->
+        <div class="subsection">
+          <h2 class="subsection-title">Size Comparison</h2>
+          <p class="subsection-description">
+            Three sizes available: Small, Medium, and Large.
+          </p>
+
+          <div class="component-sample-box">
+            <div class="component-sample-row" style="align-items: flex-end;">
+              <div class="button-state-item">
+                <span class="button-state-label">Small</span>
+                <button class="btn btn-primary btn-sm">Button</button>
+              </div>
+              <div class="button-state-item">
+                <span class="button-state-label">Medium</span>
+                <button class="btn btn-primary btn-md">Button</button>
+              </div>
+              <div class="button-state-item">
+                <span class="button-state-label">Large</span>
+                <button class="btn btn-primary btn-lg">Button</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Button Combinations -->
+        <div class="subsection">
+          <h2 class="subsection-title">Button Combinations</h2>
+          <p class="subsection-description">
+            Common patterns for using multiple buttons together.
+          </p>
+
+          <div class="component-sample-box">
+            <div class="component-sample-title">Form Actions</div>
+            <div class="btn-group">
+              <button class="btn btn-primary btn-md">Save</button>
+              <button class="btn btn-outline btn-md">Cancel</button>
+            </div>
+          </div>
+
+          <div class="component-sample-box">
+            <div class="component-sample-title">Confirmation Dialog</div>
+            <div class="btn-group">
+              <button class="btn btn-destructive btn-md">Delete</button>
+              <button class="btn btn-ghost btn-md">Cancel</button>
+            </div>
+          </div>
+
+          <div class="component-sample-box">
+            <div class="component-sample-title">Multiple Actions</div>
+            <div class="btn-group">
+              <button class="btn btn-primary btn-md">Submit</button>
+              <button class="btn btn-secondary btn-md">Save Draft</button>
+              <button class="btn btn-ghost btn-md">Reset</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Code Snippets -->
+        <div class="subsection">
+          <h2 class="subsection-title">Code Snippets</h2>
+          <p class="subsection-description">
+            HTML/CSS code for button components. Switch tabs to view.
+          </p>
+
+          <div class="code-block">
+            <div class="code-block-header">
+              <div class="code-tabs">
+                <button class="code-tab active" data-tab="html">HTML</button>
+                <button class="code-tab" data-tab="css">CSS</button>
+              </div>
+              <button class="code-copy-btn">📋 Copy</button>
+            </div>
+            <div class="code-content code-panel active" data-panel="html">
+              <pre><code><span class="comment">&lt;!-- Primary Button --&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr-name">class</span>=<span class="attr-value">"btn btn-primary btn-md"</span><span class="tag">&gt;</span>Button<span class="tag">&lt;/button&gt;</span>
+
+<span class="comment">&lt;!-- Secondary Button --&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr-name">class</span>=<span class="attr-value">"btn btn-secondary btn-md"</span><span class="tag">&gt;</span>Button<span class="tag">&lt;/button&gt;</span>
+
+<span class="comment">&lt;!-- Outline Button --&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr-name">class</span>=<span class="attr-value">"btn btn-outline btn-md"</span><span class="tag">&gt;</span>Button<span class="tag">&lt;/button&gt;</span>
+
+<span class="comment">&lt;!-- Ghost Button --&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr-name">class</span>=<span class="attr-value">"btn btn-ghost btn-md"</span><span class="tag">&gt;</span>Button<span class="tag">&lt;/button&gt;</span>
+
+<span class="comment">&lt;!-- Destructive Button --&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr-name">class</span>=<span class="attr-value">"btn btn-destructive btn-md"</span><span class="tag">&gt;</span>Button<span class="tag">&lt;/button&gt;</span></code></pre>
+            </div>
+            <div class="code-content code-panel" data-panel="css">
+              <pre><code><span class="selector">.btn</span> {
+  <span class="property">display</span>: <span class="value">inline-flex</span>;
+  <span class="property">align-items</span>: <span class="value">center</span>;
+  <span class="property">justify-content</span>: <span class="value">center</span>;
+  <span class="property">font-weight</span>: <span class="value">500</span>;
+  <span class="property">border-radius</span>: <span class="value">var(--radius-lg)</span>;
+  <span class="property">transition</span>: <span class="value">all 0.15s ease</span>;
+}
+
+<span class="selector">.btn-primary</span> {
+  <span class="property">background-color</span>: <span class="value">var(--color-primary-600)</span>;
+  <span class="property">color</span>: <span class="value">white</span>;
+}
+
+<span class="selector">.btn-md</span> {
+  <span class="property">padding</span>: <span class="value">0.75rem 1rem</span>;
+  <span class="property">font-size</span>: <span class="value">0.875rem</span>;
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Forms Section -->
+      <section id="forms" class="section">
+        <h1 class="section-title">Forms</h1>
+        <p class="section-description">
+          Form components for user input. 
+          Includes text inputs, selects, checkboxes, and more.
+        </p>
+
+        <!-- Text Input -->
+        <div class="subsection">
+          <h2 class="subsection-title">Text Input</h2>
+          <p class="subsection-description">
+            Default text input fields and various states.
+          </p>
+
+          <div class="form-samples-grid">
+            <div class="form-sample-card">
+              <div class="form-sample-title">Default State</div>
+              <div class="form-group">
+                <label class="form-label">Name</label>
+                <input type="text" class="input" placeholder="Enter your name">
+              </div>
+            </div>
+
+            <div class="form-sample-card">
+              <div class="form-sample-title">Focus State</div>
+              <div class="form-group">
+                <label class="form-label">Email</label>
+                <input type="email" class="input" placeholder="Enter your email" value="example@email.com">
+                <span class="form-hint">Please enter a valid email address.</span>
+              </div>
+            </div>
+
+            <div class="form-sample-card">
+              <div class="form-sample-title">Error State</div>
+              <div class="form-group">
+                <label class="form-label form-label-required">Password</label>
+                <input type="password" class="input input-error" placeholder="Enter password" value="123">
+                <span class="form-error">Password must be at least 8 characters.</span>
+              </div>
+            </div>
+
+            <div class="form-sample-card">
+              <div class="form-sample-title">Disabled State</div>
+              <div class="form-group">
+                <label class="form-label">User ID</label>
+                <input type="text" class="input" placeholder="Auto-generated" disabled value="user_12345">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Textarea -->
+        <div class="subsection">
+          <h2 class="subsection-title">Textarea</h2>
+          <p class="subsection-description">
+            Component for multi-line text input.
+          </p>
+
+          <div class="component-sample-box">
+            <div class="form-group">
+              <label class="form-label">Message</label>
+              <textarea class="textarea" placeholder="Enter your message..."></textarea>
+              <span class="form-hint">Maximum 500 characters allowed.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Select -->
+        <div class="subsection">
+          <h2 class="subsection-title">Select</h2>
+          <p class="subsection-description">
+            Dropdown selection component.
+          </p>
+
+          <div class="form-samples-grid">
+            <div class="form-sample-card">
+              <div class="form-sample-title">Default State</div>
+              <div class="form-group">
+                <label class="form-label">Country</label>
+                <select class="select">
+                  <option value="">Select</option>
+                  <option value="kr">South Korea</option>
+                  <option value="us">United States</option>
+                  <option value="jp">Japan</option>
+                  <option value="cn">China</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-sample-card">
+              <div class="form-sample-title">Disabled State</div>
+              <div class="form-group">
+                <label class="form-label">Language</label>
+                <select class="select" disabled>
+                  <option value="en" selected>English</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Checkbox -->
+        <div class="subsection">
+          <h2 class="subsection-title">Checkbox</h2>
+          <p class="subsection-description">
+            Checkbox component for multiple selections.
+          </p>
+
+          <div class="component-sample-box">
+            <div class="form-states-row">
+              <div class="form-state-item">
+                <div class="form-sample-title">Default</div>
+                <label class="checkbox-wrapper">
+                  <input type="checkbox" class="checkbox">
+                  <span class="checkbox-label">I agree to the terms</span>
+                </label>
+              </div>
+
+              <div class="form-state-item">
+                <div class="form-sample-title">Checked</div>
+                <label class="checkbox-wrapper">
+                  <input type="checkbox" class="checkbox" checked>
+                  <span class="checkbox-label">Marketing consent</span>
+                </label>
+              </div>
+
+              <div class="form-state-item">
+                <div class="form-sample-title">Disabled</div>
+                <label class="checkbox-wrapper">
+                  <input type="checkbox" class="checkbox" disabled>
+                  <span class="checkbox-label">Required agreement</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Radio Button -->
+        <div class="subsection">
+          <h2 class="subsection-title">Radio Button</h2>
+          <p class="subsection-description">
+            Component for single selection.
+          </p>
+
+          <div class="component-sample-box">
+            <div class="form-group">
+              <label class="form-label">Payment Method</label>
+              <div class="radio-group">
+                <label class="radio-wrapper">
+                  <input type="radio" name="payment" class="radio" checked>
+                  <span class="radio-label">Credit Card</span>
+                </label>
+                <label class="radio-wrapper">
+                  <input type="radio" name="payment" class="radio">
+                  <span class="radio-label">Bank Transfer</span>
+                </label>
+                <label class="radio-wrapper">
+                  <input type="radio" name="payment" class="radio">
+                  <span class="radio-label">Mobile Payment</span>
+                </label>
+                <label class="radio-wrapper">
+                  <input type="radio" name="payment" class="radio" disabled>
+                  <span class="radio-label">Points (Insufficient balance)</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Toggle Switch -->
+        <div class="subsection">
+          <h2 class="subsection-title">Toggle Switch</h2>
+          <p class="subsection-description">
+            Switch component for On/Off states.
+          </p>
+
+          <div class="component-sample-box">
+            <div class="form-states-row">
+              <div class="form-state-item">
+                <div class="form-sample-title">Off State</div>
+                <label class="toggle-wrapper">
+                  <input type="checkbox" class="toggle">
+                  <span class="toggle-label">Notifications</span>
+                </label>
+              </div>
+
+              <div class="form-state-item">
+                <div class="form-sample-title">On State</div>
+                <label class="toggle-wrapper">
+                  <input type="checkbox" class="toggle" checked>
+                  <span class="toggle-label">Dark Mode</span>
+                </label>
+              </div>
+
+              <div class="form-state-item">
+                <div class="form-sample-title">Disabled</div>
+                <label class="toggle-wrapper">
+                  <input type="checkbox" class="toggle" disabled>
+                  <span class="toggle-label">Auto Update</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Example -->
+        <div class="subsection">
+          <h2 class="subsection-title">Form Example</h2>
+          <p class="subsection-description">
+            Form combinations for real-world scenarios.
+          </p>
+
+          <div class="component-sample-box" style="max-width: 500px;">
+            <div class="form-sample-title">Sign Up Form</div>
+            <form onsubmit="return false;">
+              <div class="form-group">
+                <label class="form-label form-label-required">Email</label>
+                <input type="email" class="input" placeholder="example@email.com">
+              </div>
+              <div class="form-group">
+                <label class="form-label form-label-required">Password</label>
+                <input type="password" class="input" placeholder="At least 8 characters">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Nickname</label>
+                <input type="text" class="input" placeholder="Enter your nickname">
+              </div>
+              <div class="form-group">
+                <label class="checkbox-wrapper">
+                  <input type="checkbox" class="checkbox">
+                  <span class="checkbox-label">I agree to the Terms of Service and Privacy Policy</span>
+                </label>
+              </div>
+              <div class="btn-group" style="margin-top: var(--space-6);">
+                <button type="submit" class="btn btn-primary btn-md">Sign Up</button>
+                <button type="button" class="btn btn-ghost btn-md">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cards Section -->
+      <section id="cards" class="section">
+        <h1 class="section-title">Cards</h1>
+        <p class="section-description">
+          Card components for grouping and displaying content. 
+          Can be used with various layout patterns.
+        </p>
+
+        <!-- Card Variants -->
+        <div class="subsection">
+          <h2 class="subsection-title">Card Variants</h2>
+          <p class="subsection-description">
+            Various card component styles. Hover to see the hover effect.
+          </p>
+
+          <div class="card-grid">
+            <!-- Default Card -->
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Default Card</h3>
+                <p class="card-description">
+                  The most basic card style. Uses border and background color to separate content.
+                </p>
+              </div>
+            </div>
+
+            <!-- Image Card -->
+            <div class="card">
+              <div class="card-image-placeholder">Image Area</div>
+              <div class="card-body">
+                <h3 class="card-title">Image Card</h3>
+                <p class="card-description">
+                  Card with an image at the top. Suitable for thumbnails or previews.
+                </p>
+              </div>
+            </div>
+
+            <!-- Hover Effect Card -->
+            <div class="card card-hover">
+              <div class="card-body">
+                <h3 class="card-title">Hover Effect Card</h3>
+                <p class="card-description">
+                  Floats up on hover. Use for clickable items.
+                </p>
+              </div>
+            </div>
+
+            <!-- Interactive Card -->
+            <div class="card card-interactive">
+              <div class="card-body">
+                <h3 class="card-title">Interactive Card</h3>
+                <p class="card-description">
+                  Border color changes on hover, and slightly depresses on click.
+                </p>
+              </div>
+            </div>
+
+            <!-- Header/Footer Card -->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title" style="margin-bottom: 0;">Card with Header</h3>
+              </div>
+              <div class="card-body">
+                <p class="card-description">
+                  Card with separated header and footer areas. Useful for structuring complex information.
+                </p>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-primary btn-sm">Action</button>
+              </div>
+            </div>
+
+            <!-- Glassmorphism Card -->
+            <div class="glass-demo-bg">
+              <div class="card card-glass" style="width: 100%; max-width: 280px;">
+                <div class="card-body">
+                  <h3 class="card-title" style="color: white;">Glassmorphism</h3>
+                  <p class="card-description" style="color: rgba(255,255,255,0.8);">
+                    Creates a glass-like feel with translucent background and blur effect.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flexbox 레이아웃 -->
+        <div class="subsection">
+          <h2 class="subsection-title">Flexbox 레이아웃</h2>
+          <p class="subsection-description">
+            Flexbox를 활용한 다양한 정렬 패턴입니다.
+          </p>
+
+          <div class="layout-demo">
+            <div class="layout-demo-title">justify-content: flex-start</div>
+            <div class="flex-demo-row justify-start">
+              <div class="layout-demo-box">1</div>
+              <div class="layout-demo-box">2</div>
+              <div class="layout-demo-box">3</div>
+            </div>
+          </div>
+
+          <div class="layout-demo">
+            <div class="layout-demo-title">justify-content: center</div>
+            <div class="flex-demo-row justify-center">
+              <div class="layout-demo-box">1</div>
+              <div class="layout-demo-box">2</div>
+              <div class="layout-demo-box">3</div>
+            </div>
+          </div>
+
+          <div class="layout-demo">
+            <div class="layout-demo-title">justify-content: space-between</div>
+            <div class="flex-demo-row justify-between">
+              <div class="layout-demo-box">1</div>
+              <div class="layout-demo-box">2</div>
+              <div class="layout-demo-box">3</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grid Layout -->
+        <div class="subsection">
+          <h2 class="subsection-title">Grid Layout</h2>
+          <p class="subsection-description">
+            Various grid patterns using CSS Grid.
+          </p>
+
+          <div class="layout-demo">
+            <div class="layout-demo-title">2-Column Grid</div>
+            <div class="grid-demo grid-demo-2col">
+              <div class="layout-demo-box">1</div>
+              <div class="layout-demo-box">2</div>
+              <div class="layout-demo-box">3</div>
+              <div class="layout-demo-box">4</div>
+            </div>
+          </div>
+
+          <div class="layout-demo">
+            <div class="layout-demo-title">3-Column Grid</div>
+            <div class="grid-demo grid-demo-3col">
+              <div class="layout-demo-box">1</div>
+              <div class="layout-demo-box">2</div>
+              <div class="layout-demo-box">3</div>
+              <div class="layout-demo-box">4</div>
+              <div class="layout-demo-box">5</div>
+              <div class="layout-demo-box">6</div>
+            </div>
+          </div>
+
+          <div class="layout-demo">
+            <div class="layout-demo-title">Auto-fill Grid</div>
+            <div class="grid-demo grid-demo-auto">
+              <div class="layout-demo-box">1</div>
+              <div class="layout-demo-box">2</div>
+              <div class="layout-demo-box">3</div>
+              <div class="layout-demo-box">4</div>
+              <div class="layout-demo-box">5</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Responsive Behavior -->
+        <div class="subsection">
+          <h2 class="subsection-title">Responsive Behavior</h2>
+          <p class="subsection-description">
+            Layout automatically adjusts based on screen size. Try resizing your browser window.
+          </p>
+
+          <div class="responsive-demo">
+            <div class="responsive-demo-info">
+              <span class="responsive-demo-badge">Responsive</span>
+              <span>Column count adjusts automatically based on screen size</span>
+            </div>
+            <div class="card-grid">
+              <div class="card card-hover">
+                <div class="card-body">
+                  <h3 class="card-title">Card 1</h3>
+                  <p class="card-description">Card in responsive grid.</p>
+                </div>
+              </div>
+              <div class="card card-hover">
+                <div class="card-body">
+                  <h3 class="card-title">Card 2</h3>
+                  <p class="card-description">Card in responsive grid.</p>
+                </div>
+              </div>
+              <div class="card card-hover">
+                <div class="card-body">
+                  <h3 class="card-title">Card 3</h3>
+                  <p class="card-description">Card in responsive grid.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Navigation Section -->
+      <section id="navigation" class="section">
+        <h1 class="section-title">Navigation</h1>
+        <p class="section-description">
+          Navigation components to help users browse pages. 
+          Includes tabs, breadcrumbs, menus, and more.
+        </p>
+
+        <!-- Top Navigation Bar -->
+        <div class="subsection">
+          <h2 class="subsection-title">Top Navigation Bar</h2>
+          <p class="subsection-description">
+            Main navigation located at the top of the page.
+          </p>
+
+          <div class="nav-demo-container">
+            <nav class="navbar">
+              <div class="navbar-brand">Logo</div>
+              <div class="navbar-menu">
+                <a href="#" class="navbar-link active">Home</a>
+                <a href="#" class="navbar-link">Products</a>
+                <a href="#" class="navbar-link">Services</a>
+                <a href="#" class="navbar-link">About</a>
+                <a href="#" class="navbar-link">Contact</a>
+              </div>
+              <div class="navbar-actions">
+                <button class="btn btn-ghost btn-sm">Login</button>
+                <button class="btn btn-primary btn-sm">Get Started</button>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="subsection">
+          <h2 class="subsection-title">Tabs</h2>
+          <p class="subsection-description">
+            Tab navigation for switching content.
+          </p>
+
+          <div class="component-sample-box">
+            <div class="component-sample-title">Default Tabs</div>
+            <div class="tabs">
+              <button class="tab active">All</button>
+              <button class="tab">In Progress</button>
+              <button class="tab">Completed</button>
+              <button class="tab">On Hold</button>
+            </div>
+          </div>
+
+          <div class="component-sample-box">
+            <div class="component-sample-title">Boxed Tabs</div>
+            <div class="tabs-boxed">
+              <button class="tab active">Daily</button>
+              <button class="tab">Weekly</button>
+              <button class="tab">Monthly</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Breadcrumb -->
+        <div class="subsection">
+          <h2 class="subsection-title">Breadcrumb</h2>
+          <p class="subsection-description">
+            Displays the current page location hierarchically.
+          </p>
+
+          <div class="component-sample-box">
+            <nav class="breadcrumb">
+              <div class="breadcrumb-item">
+                <a href="#">Home</a>
+              </div>
+              <span class="breadcrumb-separator">/</span>
+              <div class="breadcrumb-item">
+                <a href="#">Products</a>
+              </div>
+              <span class="breadcrumb-separator">/</span>
+              <div class="breadcrumb-item">
+                <a href="#">Category</a>
+              </div>
+              <span class="breadcrumb-separator">/</span>
+              <div class="breadcrumb-item active">
+                Current Page
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="subsection">
+          <h2 class="subsection-title">Pagination</h2>
+          <p class="subsection-description">
+            Component for navigating multiple pages.
+          </p>
+
+          <div class="component-sample-box">
+            <nav class="pagination">
+              <button class="pagination-item">‹</button>
+              <button class="pagination-item">1</button>
+              <button class="pagination-item active">2</button>
+              <button class="pagination-item">3</button>
+              <button class="pagination-item">4</button>
+              <button class="pagination-item">5</button>
+              <button class="pagination-item">›</button>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="subsection">
+          <h2 class="subsection-title">Mobile Navigation</h2>
+          <p class="subsection-description">
+            Hamburger menu pattern for mobile environments.
+          </p>
+
+          <div class="form-samples-grid">
+            <div class="component-sample-box">
+              <div class="component-sample-title">Hamburger Icon</div>
+              <div class="hamburger-demo">
+                <div class="hamburger-icon" id="hamburgerDemo1">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <span class="text-sm text-secondary">Click to toggle</span>
+              </div>
+            </div>
+
+            <div class="component-sample-box">
+              <div class="component-sample-title">Open State</div>
+              <div class="hamburger-demo">
+                <div class="hamburger-icon open">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <span class="text-sm text-secondary">Transforms to X</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="component-sample-box" style="margin-top: var(--space-4);">
+            <div class="component-sample-title">Mobile Menu Panel</div>
+            <div class="mobile-menu-panel" style="max-width: 300px;">
+              <a href="#" class="mobile-menu-link active">Home</a>
+              <a href="#" class="mobile-menu-link">Products</a>
+              <a href="#" class="mobile-menu-link">Services</a>
+              <a href="#" class="mobile-menu-link">About</a>
+              <a href="#" class="mobile-menu-link">Contact</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feedback Section -->
+      <section id="feedback" class="section">
+        <h1 class="section-title">Feedback</h1>
+        <p class="section-description">
+          Feedback components to inform users of status or results. 
+          Includes toasts, modals, alerts, and more.
+        </p>
+
+        <!-- Toast Notifications -->
+        <div class="subsection">
+          <h2 class="subsection-title">Toast Notifications</h2>
+          <p class="subsection-description">
+            Temporary notification messages. Click the buttons to see them in action.
+          </p>
+
+          <div class="component-sample-box">
+            <div class="component-sample-title">Toast Demo</div>
+            <div class="btn-group">
+              <button class="btn btn-primary btn-sm" data-toast-demo="success">Success Toast</button>
+              <button class="btn btn-secondary btn-sm" data-toast-demo="info">Info Toast</button>
+              <button class="btn btn-outline btn-sm" data-toast-demo="warning">Warning Toast</button>
+              <button class="btn btn-destructive btn-sm" data-toast-demo="error">Error Toast</button>
+            </div>
+          </div>
+
+          <div class="feedback-demo-grid" style="margin-top: var(--space-6);">
+            <div class="toast toast-success">
+              <div class="toast-icon">✓</div>
+              <div class="toast-content">
+                <div class="toast-title">Success</div>
+                <div class="toast-message">Operation completed successfully.</div>
+              </div>
+              <button class="toast-close">✕</button>
+            </div>
+
+            <div class="toast toast-info">
+              <div class="toast-icon">ℹ</div>
+              <div class="toast-content">
+                <div class="toast-title">Info</div>
+                <div class="toast-message">A new update is available.</div>
+              </div>
+              <button class="toast-close">✕</button>
+            </div>
+
+            <div class="toast toast-warning">
+              <div class="toast-icon">⚠</div>
+              <div class="toast-content">
+                <div class="toast-title">Warning</div>
+                <div class="toast-message">You have unsaved changes.</div>
+              </div>
+              <button class="toast-close">✕</button>
+            </div>
+
+            <div class="toast toast-error">
+              <div class="toast-icon">✕</div>
+              <div class="toast-content">
+                <div class="toast-title">Error</div>
+                <div class="toast-message">An error occurred while processing your request.</div>
+              </div>
+              <button class="toast-close">✕</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alert Banners -->
+        <div class="subsection">
+          <h2 class="subsection-title">Alert Banners</h2>
+          <p class="subsection-description">
+            Fixed notification messages within the page.
+          </p>
+
+          <div class="feedback-demo-item" style="gap: var(--space-4);">
+            <div class="alert alert-success">
+              <div class="alert-icon">✓</div>
+              <div class="alert-content">
+                <div class="alert-title">Saved</div>
+                <div class="alert-message">Your changes have been saved successfully.</div>
+              </div>
+            </div>
+
+            <div class="alert alert-info">
+              <div class="alert-icon">ℹ</div>
+              <div class="alert-content">
+                <div class="alert-title">Notice</div>
+                <div class="alert-message">System maintenance is scheduled. Check details for more information.</div>
+              </div>
+            </div>
+
+            <div class="alert alert-warning">
+              <div class="alert-icon">⚠</div>
+              <div class="alert-content">
+                <div class="alert-title">Caution</div>
+                <div class="alert-message">Your password hasn't been changed in over 90 days.</div>
+              </div>
+            </div>
+
+            <div class="alert alert-error">
+              <div class="alert-icon">✕</div>
+              <div class="alert-content">
+                <div class="alert-title">Error Occurred</div>
+                <div class="alert-message">Connection to server lost. Please try again later.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="subsection">
+          <h2 class="subsection-title">Modal</h2>
+          <p class="subsection-description">
+            Dialog that focuses user attention.
+          </p>
+
+          <div class="component-sample-box">
+            <div class="component-sample-title">Modal Demo</div>
+            <button class="btn btn-primary btn-md" id="openModalDemo">Open Modal</button>
+          </div>
+
+          <!-- Modal Backdrop -->
+          <div class="modal-backdrop" id="demoModalBackdrop">
+            <div class="modal">
+              <div class="modal-header">
+                <h3 class="modal-title">Modal Title</h3>
+                <button class="modal-close" data-close-modal>✕</button>
+              </div>
+              <div class="modal-body">
+                <p style="color: var(--color-text-secondary);">
+                  Modal content is displayed here. Use it to convey important information 
+                  or perform actions that require confirmation.
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-ghost btn-md" data-close-modal>Cancel</button>
+                <button class="btn btn-primary btn-md" data-close-modal>Confirm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tooltip -->
+        <div class="subsection">
+          <h2 class="subsection-title">Tooltip</h2>
+          <p class="subsection-description">
+            Displays additional information when hovering over an element.
+          </p>
+
+          <div class="component-sample-box">
+            <div class="btn-group">
+              <div class="tooltip-wrapper">
+                <button class="btn btn-primary btn-md">Hover over me</button>
+                <div class="tooltip">This is a tooltip</div>
+              </div>
+
+              <div class="tooltip-wrapper">
+                <button class="btn btn-secondary btn-md">Save</button>
+                <div class="tooltip">Save changes (Ctrl+S)</div>
+              </div>
+
+              <div class="tooltip-wrapper">
+                <button class="btn btn-outline btn-md">Help</button>
+                <div class="tooltip">View detailed instructions</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trends Section -->
+      <section id="trends" class="section">
+        <h1 class="section-title">Trends</h1>
+        <p class="section-description">
+          Introducing the latest UI design trends and tips. 
+          Covers glassmorphism, neumorphism, micro-interactions, and more.
+        </p>
+
+        <!-- Glassmorphism -->
+        <div class="subsection">
+          <h2 class="subsection-title">Glassmorphism</h2>
+          <p class="subsection-description">
+            A design trend that creates a glass-like feel with translucent backgrounds and blur effects.
+          </p>
+
+          <div class="trend-card">
+            <div class="glassmorphism-demo">
+              <div class="glass-card">
+                <div class="glass-card-title">Glass Card</div>
+                <div class="glass-card-text">
+                  Create depth in UI using backdrop-filter and translucent backgrounds.
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: var(--space-4);">
+              <div class="component-sample-title">CSS Code</div>
+              <pre><code>.glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+}</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- Neumorphism -->
+        <div class="subsection">
+          <h2 class="subsection-title">Neumorphism</h2>
+          <p class="subsection-description">
+            A design that makes elements appear raised or recessed from the surface using soft shadows.
+          </p>
+
+          <div class="trend-card">
+            <div class="neumorphism-demo">
+              <div class="neu-card">
+                <div class="neu-card-title">Neu Card</div>
+                <div class="neu-card-text">Soft shadow effect</div>
+              </div>
+              <button class="neu-button">Neu Button</button>
+            </div>
+
+            <div style="margin-top: var(--space-4);">
+              <div class="component-sample-title">CSS Code</div>
+              <pre><code>.neumorphism {
+  background: #e0e5ec;
+  border-radius: 16px;
+  box-shadow: 
+    8px 8px 16px #b8bec7,
+    -8px -8px 16px #ffffff;
+}</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- Micro Interactions -->
+        <div class="subsection">
+          <h2 class="subsection-title">Micro Interactions</h2>
+          <p class="subsection-description">
+            Small animations that enhance user experience.
+          </p>
+
+          <div class="trend-card">
+            <div class="micro-interaction-demo">
+              <div class="micro-demo-item">
+                <div class="hover-scale"></div>
+                <span class="micro-demo-label">Hover Scale</span>
+              </div>
+              <div class="micro-demo-item">
+                <div class="hover-rotate"></div>
+                <span class="micro-demo-label">Hover Rotate</span>
+              </div>
+              <div class="micro-demo-item">
+                <div class="pulse-animation"></div>
+                <span class="micro-demo-label">Pulse</span>
+              </div>
+              <div class="micro-demo-item">
+                <div class="bounce-animation"></div>
+                <span class="micro-demo-label">Bounce</span>
+              </div>
+            </div>
+
+            <div style="margin-top: var(--space-4);">
+              <div class="component-sample-title">CSS Code</div>
+              <pre><code>/* Hover Scale */
+.hover-scale:hover {
+  transform: scale(1.1);
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tips Section -->
+        <div class="subsection">
+          <h2 class="subsection-title">Practical Tips</h2>
+          <p class="subsection-description">
+            Practical tips for creating better UI.
+          </p>
+
+          <div class="tips-grid">
+            <div class="tip-card">
+              <div class="tip-card-icon">♿</div>
+              <div class="tip-card-title">Accessibility</div>
+              <div class="tip-card-text">
+                Maintain color contrast ratio of 4.5:1 or higher, support keyboard navigation, 
+                and consider screen reader compatibility.
+              </div>
+            </div>
+
+            <div class="tip-card">
+              <div class="tip-card-icon">⚡</div>
+              <div class="tip-card-title">Performance</div>
+              <div class="tip-card-text">
+                Only animate transform and opacity, use will-change appropriately,
+                and avoid unnecessary reflows.
+              </div>
+            </div>
+
+            <div class="tip-card">
+              <div class="tip-card-icon">📱</div>
+              <div class="tip-card-title">Responsive Design</div>
+              <div class="tip-card-text">
+                Design mobile-first, ensure touch targets are at least 44px,
+                and use fluid typography.
+              </div>
+            </div>
+
+            <div class="tip-card">
+              <div class="tip-card-icon">🎨</div>
+              <div class="tip-card-title">Consistency</div>
+              <div class="tip-card-text">
+                Use design tokens, reuse components,
+                and document your style guide.
+              </div>
+            </div>
+
+            <div class="tip-card">
+              <div class="tip-card-icon">🌙</div>
+              <div class="tip-card-title">Dark Mode</div>
+              <div class="tip-card-text">
+                Manage themes with CSS variables, use prefers-color-scheme,
+                and avoid pure black (#000).
+              </div>
+            </div>
+
+            <div class="tip-card">
+              <div class="tip-card-icon">✨</div>
+              <div class="tip-card-title">Micro Interactions</div>
+              <div class="tip-card-text">
+                Provide immediate feedback, keep animations 200-300ms,
+                and avoid excessive effects.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Style Guide Section -->
+      <section id="guide" class="section">
+        <h1 class="section-title">📘 Style Guide</h1>
+        <p class="section-description">
+          A modern web UI style guide with practical tips.
+          Provides best practices you can apply directly to your projects.
+        </p>
+
+        <!-- Design Tokens Guide -->
+        <div class="subsection">
+          <h2 class="subsection-title">📦 Design Tokens</h2>
+          
+          <div class="guide-card">
+            <h3 class="guide-card-title">Color System</h3>
+            <div class="code-block">
+              <div class="code-block-header">
+                <span class="code-block-title">CSS</span>
+              </div>
+              <pre class="code-content"><code>/* Primary - Main actions, brand color */
+--color-primary-500: #3b82f6;
+--color-primary-600: #2563eb;  /* Hover state */
+--color-primary-700: #1d4ed8;  /* Active state */
+
+/* Semantic - Status representation */
+--color-success: #22c55e;  /* Success, completion */
+--color-warning: #f59e0b;  /* Warning, caution */
+--color-error: #ef4444;    /* Error, delete */
+--color-info: #3b82f6;     /* Information, guidance */</code></pre>
+            </div>
+            <div class="guide-tip">
+              <span class="guide-tip-icon">💡</span>
+              <span class="guide-tip-text">Define colors on a 50-900 scale for easier dark mode support.</span>
+            </div>
+          </div>
+
+          <div class="guide-card">
+            <h3 class="guide-card-title">Typography</h3>
+            <div class="code-block">
+              <div class="code-block-header">
+                <span class="code-block-title">CSS</span>
+              </div>
+              <pre class="code-content"><code>/* Font Scale */
+--text-xs: 0.75rem;   /* 12px - Captions, labels */
+--text-sm: 0.875rem;  /* 14px - Secondary text */
+--text-base: 1rem;    /* 16px - Body default */
+--text-lg: 1.125rem;  /* 18px - Emphasized body */
+--text-xl: 1.25rem;   /* 20px - Subheadings */
+--text-2xl: 1.5rem;   /* 24px - Section titles */
+--text-3xl: 1.875rem; /* 30px - Page titles */</code></pre>
+            </div>
+            <div class="guide-tip">
+              <span class="guide-tip-icon">💡</span>
+              <span class="guide-tip-text">Keep body text at 16px or larger, line height between 1.5-1.75.</span>
+            </div>
+          </div>
+
+          <div class="guide-card">
+            <h3 class="guide-card-title">Spacing System (4px based)</h3>
+            <div class="code-block">
+              <div class="code-block-header">
+                <span class="code-block-title">CSS</span>
+              </div>
+              <pre class="code-content"><code>--space-1: 0.25rem;  /* 4px */
+--space-2: 0.5rem;   /* 8px */
+--space-3: 0.75rem;  /* 12px */
+--space-4: 1rem;     /* 16px */
+--space-6: 1.5rem;   /* 24px */
+--space-8: 2rem;     /* 32px */</code></pre>
+            </div>
+            <div class="guide-tip">
+              <span class="guide-tip-icon">💡</span>
+              <span class="guide-tip-text">Using 4px or 8px multiples improves visual consistency.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Buttons Guide -->
+        <div class="subsection">
+          <h2 class="subsection-title">🔘 Buttons</h2>
+          
+          <div class="guide-card">
+            <h3 class="guide-card-title">Usage by Variant</h3>
+            <div class="guide-table-wrapper">
+              <table class="guide-table">
+                <thead>
+                  <tr>
+                    <th>Variant</th>
+                    <th>Usage</th>
+                    <th>Examples</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="badge badge-primary">Primary</span></td>
+                    <td>Main action (1 per page recommended)</td>
+                    <td>Save, Submit, Purchase</td>
+                  </tr>
+                  <tr>
+                    <td><span class="badge badge-secondary">Secondary</span></td>
+                    <td>Secondary action</td>
+                    <td>Cancel, Back</td>
+                  </tr>
+                  <tr>
+                    <td><span class="badge badge-outline">Outline</span></td>
+                    <td>Alternative action</td>
+                    <td>More, Filter</td>
+                  </tr>
+                  <tr>
+                    <td><span class="badge badge-ghost">Ghost</span></td>
+                    <td>Minimal emphasis</td>
+                    <td>Close, Menu items</td>
+                  </tr>
+                  <tr>
+                    <td><span class="badge badge-destructive">Destructive</span></td>
+                    <td>Dangerous action</td>
+                    <td>Delete, Unsubscribe</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="guide-tip">
+              <span class="guide-tip-icon">💡</span>
+              <span class="guide-tip-text">Ensure touch targets are at least 44x44px on mobile.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Forms Guide -->
+        <div class="subsection">
+          <h2 class="subsection-title">📝 Form Components</h2>
+          
+          <div class="guide-card">
+            <h3 class="guide-card-title">Input Field States</h3>
+            <div class="code-block">
+              <div class="code-block-header">
+                <span class="code-block-title">CSS</span>
+              </div>
+              <pre class="code-content"><code>/* Default */
+border: 1px solid var(--color-border);
+
+/* Focus - Clear feedback */
+border-color: var(--color-primary-500);
+box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+
+/* Error */
+border-color: var(--color-error);
+
+/* Disabled */
+background-color: var(--color-bg-secondary);
+cursor: not-allowed;</code></pre>
+            </div>
+            <div class="guide-tip">
+              <span class="guide-tip-icon">💡</span>
+              <span class="guide-tip-text">Use placeholders for hints only, never as label replacements!</span>
+            </div>
+          </div>
+
+          <div class="guide-card">
+            <h3 class="guide-card-title">Form Layout Tips</h3>
+            <ul class="guide-list">
+              <li>Place labels above input fields (mobile-friendly)</li>
+              <li>Mark required fields with <code>*</code></li>
+              <li>Show error messages directly below the field</li>
+              <li>Group related fields together</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Accessibility Guide -->
+        <div class="subsection">
+          <h2 class="subsection-title">♿ Accessibility</h2>
+          
+          <div class="guide-card">
+            <h3 class="guide-card-title">Requirements</h3>
+            <ul class="guide-checklist">
+              <li><strong>Color Contrast:</strong> WCAG 2.1 AA standard (4.5:1 or higher)</li>
+              <li><strong>Keyboard Navigation:</strong> Support Tab, Enter, ESC</li>
+              <li><strong>Focus Indicator:</strong> Clear focus ring</li>
+              <li><strong>ARIA Labels:</strong> Required for icon buttons</li>
+            </ul>
+            <div class="code-block">
+              <div class="code-block-header">
+                <span class="code-block-title">CSS</span>
+              </div>
+              <pre class="code-content"><code>/* Focus Ring */
+:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}</code></pre>
+            </div>
+            <div class="guide-tip">
+              <span class="guide-tip-icon">💡</span>
+              <span class="guide-tip-text">Test that all features are accessible using keyboard only.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dark Mode Guide -->
+        <div class="subsection">
+          <h2 class="subsection-title">🌙 Dark Mode</h2>
+          
+          <div class="guide-card">
+            <h3 class="guide-card-title">Implementation</h3>
+            <div class="code-block">
+              <div class="code-block-header">
+                <span class="code-block-title">CSS</span>
+              </div>
+              <pre class="code-content"><code>/* Define themes with CSS variables */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #18181b;
+}
+
+[data-theme="dark"] {
+  --color-bg: #18181b;
+  --color-text: #fafafa;
+}
+
+/* Auto-detect system theme */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: #18181b;
+    --color-text: #fafafa;
+  }
+}</code></pre>
+            </div>
+          </div>
+
+          <div class="guide-card">
+            <h3 class="guide-card-title">Checklist</h3>
+            <ul class="guide-checklist">
+              <li>Define all colors as CSS variables</li>
+              <li>Adjust shadow intensity (stronger in dark mode)</li>
+              <li>Check image/icon contrast</li>
+              <li>Save user preference in localStorage</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Performance Guide -->
+        <div class="subsection">
+          <h2 class="subsection-title">⚡ Performance</h2>
+          
+          <div class="guide-card">
+            <h3 class="guide-card-title">Animation Optimization</h3>
+            <div class="code-block">
+              <div class="code-block-header">
+                <span class="code-block-title">CSS</span>
+              </div>
+              <pre class="code-content"><code>/* Smooth transitions */
+transition: all 0.2s ease;
+
+/* Use transform for complex animations */
+transform: translateY(-4px);  /* ✅ Good */
+top: -4px;                    /* ❌ Avoid */
+
+/* Respect reduced motion settings */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}</code></pre>
+            </div>
+            <div class="guide-tip">
+              <span class="guide-tip-icon">💡</span>
+              <span class="guide-tip-text">Use CSS variables to reduce duplication and avoid unnecessary animations.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- References -->
+        <div class="subsection">
+          <h2 class="subsection-title">🔗 References</h2>
+          
+          <div class="guide-links">
+            <a href="https://tailwindcss.com" target="_blank" rel="noopener" class="guide-link-card">
+              <div class="guide-link-title">Tailwind CSS</div>
+              <div class="guide-link-desc">Utility class reference</div>
+            </a>
+            <a href="https://www.radix-ui.com" target="_blank" rel="noopener" class="guide-link-card">
+              <div class="guide-link-title">Radix UI</div>
+              <div class="guide-link-desc">Accessible components</div>
+            </a>
+            <a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank" rel="noopener" class="guide-link-card">
+              <div class="guide-link-title">WCAG 2.1</div>
+              <div class="guide-link-desc">Accessibility guidelines</div>
+            </a>
+            <a href="https://css-tricks.com" target="_blank" rel="noopener" class="guide-link-card">
+              <div class="guide-link-title">CSS Tricks</div>
+              <div class="guide-link-desc">CSS tips and tricks</div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- JavaScript 파일 -->
+  <script src="js/theme.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/code-copy.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
